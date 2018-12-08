@@ -1,0 +1,60 @@
+/**index.wxss**/
+@import "../footer/footer.wxss";
+.top{padding: 12rpx 20rpx 10rpx 32rpx;display: flex;display: -webkit-flex;}
+.location{background: #a4a4a4;height: 72rpx;line-height: 72rpx;color: #fff;font-size: 26rpx;width: 220rpx;border-radius: 72rpx;display: flex;display: -webkit-flex;align-items: center;margin-right: 30rpx;}
+.dwico{width: 25rpx;height: 34rpx;margin-left: 21rpx;margin-right: 17rpx;display: block;}
+.location text{flex: 1;}
+.rightico{width: 13rpx;height: 24rpx;margin-right: 18rpx;display: block;}
+.search{background: #ededed;height: 72rpx;border-radius: 20rpx;flex: 1;display: flex;display: -webkit-flex;align-items: center;box-sizing: border-box;padding: 0 20rpx;}
+.search image{width: 37rpx;height: 37rpx;display: block;margin-right: 18rpx;}
+.search input{font-size: 26rpx;color: #a4a4a4;flex: 1;}
+.banner{height: 362rpx;}
+.banner image{width: 100%;}
+
+.haohuo{position: relative;padding-top: 27rpx;margin-bottom: 22rpx;}
+.title{font-size: 28rpx;color: #fff;width: 203rpx;height: 50rpx;line-height: 50rpx;border-radius: 0 50rpx 50rpx 0;box-sizing: border-box;padding-left: 35rpx;position: absolute;left: 0;top: 0;background: -webkit-linear-gradient(left, #ef005a , #e10581);}
+.haoimg image{width: 100%;height: 207rpx;display: block;}
+.cptit{height: 96rpx;line-height: 96rpx;border-left: 7rpx solid #ed4d7e;padding-left: 24rpx;position: relative;}
+.cptit .more{position: absolute;top: 0;right: 39rpx;}
+.gwcon{padding: 44rpx 44rpx 0;}
+.gwlist{display: flex;display: -webkit-flex;margin-bottom: 28rpx;}
+.gwcon .gwlist:last-child .gwinfo{border-bottom: none;}
+.gwpic{width: 222rpx;height: 227rpx;position: relative;}
+.gwpic image{display: block;width: 100%;height: 100%;}
+.yishou{position: absolute;left: 0;bottom: 0;background: #b3b3b3;border-radius: 4rpx;font-size: 26rpx;height: 52rpx;line-height: 52rpx;padding: 0 7rpx;color: #fff;}
+.gwinfo{flex: 1;padding-bottom: 33rpx;border-bottom: 1px solid #c6c6c6;padding-left: 40rpx;position: relative;}
+.name{margin-right: 42rpx;font-size: 28rpx;color: #333;}
+.name text{display: block;font-size: 24rpx;color: #999;margin-top: 10rpx;}
+.price{font-size: 40rpx;color: #df0c1d;margin-top: 80rpx;}
+.fuhao{font-size: 28rpx;}
+.jiao{font-size: 24rpx;}
+.yuan{font-size: 24rpx;color: #666;margin-top: 15rpx;}
+.gwc{width: 66rpx;height: 66rpx;background: #ed4d7e;border-radius: 10rpx;position: absolute;right: 0;bottom: 33rpx;}
+.gwc image{display: block;width: 100%;height: 100%;}
+
+
+
+.zhichi{padding: 25rpx 0 33rpx;text-align: center;font-size: 24rpx;color: #888282;background: #ededed;}
+.zhichi image{display: block;width: 133rpx;margin: 0 auto 10rpx;}
+.gong{border-top: 24rpx solid #f1f1f1;border-bottom: 20rpx solid #f1f1f1;padding: 0 22rpx 0 35rpx;height: 81rpx;line-height: 81rpx;display: flex;display: -webkit-flex;align-items: center;}
+.gong text{font-size: 28rpx;color: #e10519;}
+.gong_text{flex: 1;margin-right: 50rpx;margin-left: 20rpx;font-size: 28rpx;color: #333;white-space: nowrap;width: 443rpx;overflow: hidden;}
+.gong text{ width:15%; float: left;}
+.more image{width: 13rpx;height: 24rpx;margin-left: 33rpx;vertical-align: middle;}
+.swiper_container {
+  height: 81rpx;
+  width: 70%;
+  
+}
+
+.swiper_item {
+  font-size: 25rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  letter-spacing: 2px;
+  height: 81rpx;
+  
+}
+.swiper_item navigator{  height: 81rpx;}
+.more{font-size: 28rpx;color: #9c9c9c; width: 15%;}

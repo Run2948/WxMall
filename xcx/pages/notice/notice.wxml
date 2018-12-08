@@ -1,0 +1,16 @@
+<!--公告pages/notice/notice.wxml-->
+<scroll-view scroll-y="true" class="scoll-h" bindscrolltolower="bindDownLoad" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+<block wx:for="{{list}}" wx:key="{{item.articleId}}">
+<view class='li'>
+<navigator url='/pages/noticeDe/noticeDe?id={{item.articleId}}'>
+  <view class='p'>{{item.title}}</view>
+  <view class='ckxq'>查看详情</view>
+  </navigator>
+</view>
+  </block>
+</scroll-view>
+ <view>
+    <loading hidden="{{hidden}}">
+      加载中...
+    </loading>
+  </view>

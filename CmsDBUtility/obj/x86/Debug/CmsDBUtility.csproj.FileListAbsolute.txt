@@ -1,0 +1,9 @@
+F:\web\Net\CmsNet\CmsDBUtility\bin\Debug\CmsDBUtility.pdb
+F:\web\Net\CmsNet\CmsDBUtility\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\web\Net\CmsNet\CmsDBUtility\obj\x86\Debug\CmsDBUtility.Properties.Resources.resources
+F:\web\Net\CmsNet\CmsDBUtility\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\web\Net\CmsNet\CmsDBUtility\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\web\Net\CmsNet\CmsDBUtility\obj\x86\Debug\CmsDBUtility.pdb
+F:\web\Net\CmsNet\CmsDBUtility\bin\Debug\CmsDBUtility.dll.config
+F:\web\Net\CmsNet\CmsDBUtility\bin\Debug\CmsDBUtility.dll
+F:\web\Net\CmsNet\CmsDBUtility\obj\x86\Debug\CmsDBUtility.dll

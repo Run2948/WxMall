@@ -1,0 +1,15 @@
+/* pages/classification/classification.wxss */
+@import "../footer/footer.wxss";
+.top{padding: 12rpx 20rpx 10rpx 32rpx;display: flex;display: -webkit-flex;}
+.location{background: #a4a4a4;height: 72rpx;line-height: 72rpx;color: #fff;font-size: 26rpx;width: 220rpx;border-radius: 72rpx;display: flex;display: -webkit-flex;align-items: center;margin-right: 30rpx;}
+.dwico{width: 25rpx;height: 34rpx;margin-left: 21rpx;margin-right: 17rpx;display: block;}
+.location text{flex: 1;}
+.rightico{width: 13rpx;height: 24rpx;margin-right: 18rpx;display: block;}
+.search{background: #ededed;height: 72rpx;border-radius: 20rpx;flex: 1;display: flex;display: -webkit-flex;align-items: center;box-sizing: border-box;padding: 0 20rpx;}
+.search image{width: 37rpx;height: 37rpx;display: block;margin-right: 18rpx;}
+.search input{font-size: 26rpx;color: #a4a4a4;flex: 1;}
+.list{display: flex;display: -webkit-flex;flex-wrap: wrap;margin-top: 20rpx;}
+.li{text-align: center;font-size: 24rpx;color: #333;width: 33.33%;margin-bottom: 30rpx;}
+.li_img{width: 168rpx;height: 135rpx;margin: 0 auto 10rpx;position: relative;}
+.li .pic{display: block;width: 100%;height: 100%;}
+.tejia{width: 60rpx;height: 60rpx;display: block;position: absolute;top: -3rpx;left: -5rpx;}

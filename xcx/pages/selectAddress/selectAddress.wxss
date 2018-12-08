@@ -1,0 +1,18 @@
+/* pages/selectAddress/selectAddress.wxss */
+@import "../pub_top/pub_top.wxss";
+.addrcon{padding: 0 0 135rpx;}
+page{background: #f1f1f1;}
+.addrlist{background: #fff;padding: 35rpx 30rpx 0;border-bottom: 1px solid #cfcfd0;}
+.addr{font-size: 28rpx;color: #515151;margin-bottom: 15rpx;}
+.dianhua{font-size: 28rpx;color: #999;}
+.dianhua text{margin-right: 30rpx;}
+.addrb{padding: 23rpx 0 25rpx;display: flex;display: -webkit-flex;border-top: 1px solid #cfcfd0;font-size: 28rpx;color: #4d4d4d;line-height: 43rpx;margin-top: 23rpx;}
+.moren{ flex: 1;}
+.addrb button{font-size: 28rpx;color: #4d4d4d;border-radius: 0;height: 43rpx;line-height: 43rpx;}
+.addrb radio .wx-radio-input{width: 18px;height: 18px;}
+.addrb image{height: 43rpx;margin-right: 12rpx;vertical-align: top;}
+.edit{margin-right: 32rpx;}
+.edit image{width: 43rpx;}
+.delete image{width: 39rpx;}
+.addbtn{background: #e6442d;height: 87rpx;line-height: 87rpx;position: fixed;bottom: 24rpx;left: 69rpx;right: 69rpx;border-radius: 20rpx;font-size: 26rpx;color: #fff;padding-left: 40rpx;}
+.addbtn image{display: block;width: 26rpx;height: 26rpx;position: absolute;top: 50%;margin-top: -13rpx;right: 40rpx;}

@@ -1,0 +1,6 @@
+/* pages/coupon/coupon.wxss */
+@import "../pub_top/pub_top.wxss";
+page{background: #e2e2e2;}
+.thqnav{background: #fff;display: flex;display: -webkit-flex;}
+.thqnav view{width: 50%;text-align: center;padding: 20rpx 0;font-size: 28rpx;color: #030303;box-sizing: border-box;}
+.thqnav view.on{color: #ff0080;border-bottom: 2px solid #ff0080;padding-bottom: 18rpx;}

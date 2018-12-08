@@ -1,0 +1,109 @@
+
+body { margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; font-size: 12px; color:#3a2d0a; font-family:Arial }
+
+form,select,option,input{ font-size:12px;}
+
+ul, li, form { margin: 0px; padding: 0px; }
+ul { list-style-type: none; }
+
+a { text-decoration: none; color: #382e0b; }
+a:hover { text-decoration: none;color: #7e672c; }
+
+.kuang { border: 1px solid #000000; }
+input { color: #3F6293; background-color: #FBFBFB; border: 1px solid #CAD1DD; line-height:20px; height:23px; }
+textarea { color: #3F6293; background-color: #FBFBFB; border: 1px solid #CAD1DD;  height:64px; width:360px;}
+.link { color:#000000; }
+.inputBt, .gvBtAField a, .gvBtAField a:hover { color: #000000; background: url(inputBtn.gif) no-repeat; border: none;height: 25px; width: 83px; font-size: 12px; font-weight: normal; line-height: 25px; text-align:center; }
+.gvBtAField a, .gvBtAField a:hover { text-decoration: none; text-align: center; display: block; }
+.inputBt6 { color: #000000; background: url(inputBt100.gif) no-repeat; border: none; height: 23px; width: 100px; font-size: 12px; font-weight: normal; line-height: 20px; text-align:center; }
+
+#top {color: #3a2d0a; }
+#logoImgTd { background:url(logoimgtd.gif) repeat-x; height:75px; padding:0 20px}
+#topLoginMessage { float: right; padding-top: 0px; padding-left: 10px; }
+#topLoginMessage a { color: #000000; }
+
+#siteLanguageList { }
+
+#topHelp { float: right; margin-top: 10px; margin-right: 25px; }
+
+#topMenu { background: url(MenuBg.gif) repeat-x; height:40px; background-repeat: repeat-x; padding-left:55px; }
+#topMenu li { line-height: 37px; text-align: center; float: left; width: 105px; background: url(menulibg.gif) no-repeat left top; }
+#topMenu li a { font-size: 14px; width: 100%; font-weight: bolder; color: #382e0b; display: block; }
+#topMenu li a:hover { color: #7e672c; text-decoration: none; background: url(menuABg.gif) left top; width:105px; height:37px; display: block;}
+#topMenu .thisPage, #topMenu .thisPage a, #topMenu .thisPage a:hover { color: #382e0b; text-decoration: none; background: url(menuABg.gif) left top; width:104px; height:37px;display: block; cursor: default; }
+#topMenu .exit{ font-size:12px; float:right; line-height:37px; background:url(exit.gif) no-repeat; width:83px; height:40px; padding-left:15px;}
+
+#left { width: 190px; color: #3a2b0a; text-align:center; background: #f5f5f3; border-right:1px solid #dfdfd7; padding-bottom: 15px; min-height:442px;  height:expression(this.scrollHeight > 442 ? "auto":"442px");
+}
+.leftMenuTitle { background: url(leftMenuTitleBg.gif) no-repeat left center; width:149px; height:30px; line-height: 30px; font-size:14px; font-weight:bold; color:#efbc0b; margin-top:10px; }
+.leftMenu { margin:10px auto 20px auto; }
+.leftMenu li {background: url(leftMenuLiBg1.gif) no-repeat left bottom; width:149px; height:30px; padding-top: 5px; }
+.leftMenu li a { color: #3a2d0b; display: block; background: url(leftMenuLiBg1.gif) no-repeat left top; line-height: 30px; height: 30px; }
+.leftMenu li a:hover { background: url(leftMenuLiBg1.gif) no-repeat; text-decoration: none; color: #7e672c; line-height: 30px; cursor:pointer; }
+.leftMenu .thisPage, .leftMenu .thisPage a, .leftMenu .thisPage a:hover { background-image: url(leftMenuLiBg1.gif); text-decoration: none; color: #3a2d0b; cursor: default; }
+
+#mainMenu { background: url(mainMenuBg.gif) repeat-x left top; height: 30px; margin:10px 10px 0 10px; }
+#mainMenu ul { padding-left: 20px;}
+#mainMenu li { float: left; margin-right: 10px;background: url(mainMenuA1.gif) no-repeat; width:84px; height:30px; line-height:30px; }
+#mainMenu a { display: block; text-align: center; background: url(mainMenuA1.gif) no-repeat; width:84px; height:30px; color: #000;l }
+#mainMenu a:hover { display: block;text-align: center; background: url(mainMenuA2.gif) no-repeat;width:84px; height:30px;  text-decoration: none; color: #3a2d0a; }
+#mainMenu .thisPage a, #mainMenu .thisPage a:hover, #mainMenu .thisPage { background: url(mainMenuA2.gif) no-repeat; width:84px; height:30px; color: #3a2d0a; cursor: default; font-weight:bold }
+
+#main { padding: 8px; border:1px solid #e1ded7; border-top:none; margin:10px; margin-top:0px; }
+#main p { line-height: 120%; padding: 0px; margin: 0px; }
+#main .deliveryName, #main .paymentName { font-weight: bold; }
+#main .deliveryContent, #main .paymentContent { padding-left: 10px; padding-top: 5px; padding-bottom: 5px; }
+#main .regularExpression { width: 80px; }
+#main .deliveryMoneyLabel { color: #333333; }
+#main .deliveryMoney { color: #FF0000; }
+#mainTopTable { margin-bottom: 8px; }
+#mainTopTable .inputBt6 { margin-right: 10px; }
+#mainBottTable { margin-top: 8px; }
+#mainBottTable .inputText { width: 100px; }
+#main td { height:20px; }
+.mainTitle { color: #3F6293; background-color: #F7F7F7; text-indent: 15px; height: 20px; line-height: 20px; }
+.explain { color: #999999; }
+.mainLeftTd { width: 120px; }
+.mainContentRightTd { width: 83%; }
+.mainContentLeftTd { width: 17%; }
+
+.mainContentRightTd input { width:288px}
+
+#boot { background: url(bootBg.gif) repeat-x; height: 79px; color: #333333; text-align: center; font-size: 12px; }
+#boot p{ margin:0; padding:0}
+
+.msg, .errorMsg { line-height: 24px; height: 24px; border: 1px solid #D7D7D7;border-bottom: none; display:block;font-weight: bolder; color: #000000; text-align: center; overflow:hidden;}
+.errorMsg { color: #000; }
+.errorMsg a { color: #000; font-weight: bolder; text-decoration:none; }
+.errorMsg a:hover { color: #000; text-decoration: none; }
+
+.gv { border: 1px solid #D7D7D7; }
+.gvHeader { color: #3F6293; background: #F7F7F7; height: 24px; line-height: 24px; text-align: center; font-weight: normal; font-variant: normal; }
+.gvHeader th { font-weight: normal; font-variant: normal; }
+.gvRow, .gvAlternatingRow, .gvEditRow { line-height: 20px; text-align: center; padding: 2px; height: 20px; }
+.gvAlternatingRow { background: #F5FBFF; }
+.gvEditRow { background: #FAF9DD; }
+.gvEditRow input { background: #FFFFFF; width: 80px; }
+.gvEditRow .gvOrderId input, .gvEditRow .gvOrderId { width: 30px; }
+.gvEditRow .checkBox input, .gvEditRow .checkBox { width: auto; }
+.gvCommandField { text-align: center; width: 130px; }
+.gvLeftField { text-align: center; padding-left: 10px; }
+.gvBtAField { text-align: center; width: 130px; }
+.gvCommandField input { background-image: url(gvCommandFieldABg.gif) no-repeat; line-height: 23px; border: none; width: 50px; height:25px; margin-right: 3px; margin-left: 3px; text-indent: 10px; }
+.gvPage { padding-left: 15px; font-size: 18px; color: #333333; font-family: Arial, Helvetica, sans-serif; }
+.gvPage a { display: block; text-decoration: none; padding: 2px 5px 2px 5px; border: 1px solid #FFFFFF; float: left; font-size: 12px; font-weight: normal; }
+.gvPage a:hover { display: block; text-decoration: none; border: 1px solid #CCCCCC; }
+
+.radio, .radio input, .checkBox, .checkBox input { background-color:transparent; border: none; }
+
+.MenuName{ padding-left:5%; text-align:left;}
+
+.fLeft { display: block; float: left; margin-right: 8px; height:84px; }
+.show { }
+.hide { display: none; }
+.adminput{ width:288px}
+.adminpur{ width:258px}
+.adminbox { width:288px; height:100px}
+
+.bg{background:#eee}
+.over{ background:#E0EEF5}

@@ -1,0 +1,49 @@
+<!--pages/order/order.wxml-->
+<!-- <include src="../footer/footer.wxml"/> -->
+<view class='search'>
+  <image src='../images/search.jpg'></image>
+  <input type='text' placeholder='请输入订单号' value="{{keyWord}}"   bindinput="searchActiveChangeinput" bindblur='searchSubmit'></input>
+</view>
+<view class='switch_box'>
+  <!-- 选中选项class=“active” -->
+  <navigator bindtap='switchTab' data-order='0' hover-class='none'  class='{{switchTab==true ? "active":""}}'>全部</navigator>
+  <navigator bindtap='switchTab' data-order='1' hover-class='none' class='{{switchTabOne==true ? "active":""}}'>待付款</navigator>
+  <navigator bindtap='switchTab' data-order='2' hover-class='none' class='{{switchTabTwo==true ? "active":""}}'>未完成</navigator>
+  <navigator bindtap='switchTab' data-order='3' hover-class='none' class='{{switchTabThree==true ? "active":""}}'>已完成</navigator>
+  <navigator bindtap='switchTab' data-order='4' hover-class='none' class='{{switchTabFour==true ? "active":""}}'>已取消</navigator>
+</view>
+<block wx:for="{{orderList}}" wx:key="{{item.id}}">
+<view class='order_hao'>
+  <text class='left'>订单号: {{item.order_num}}</text>
+  <text class='right'> {{item.updateTime}}</text>
+</view>
+<block wx:for="{{item.orderSub}}" wx:for-item="twodata" wx:key="{{itemSub.id}}">
+<view class='order'>
+  <image src='{{hostUrl}}{{twodata.litpic}}' class='order_img'></image>
+  <view class='order_xx'>
+    <text class='left'>{{twodata.title}}</text>
+  </view>
+  <view class='order_xx'>
+    <text class='left'>规格:/{{twodata.property_value}}</text>
+  </view>
+  <view class='order_xx'>
+    <text class='left'>X{{twodata.quantity}}</text>
+  </view>
+</view>
+  </block>
+<view class='order_zt'>
+  <view class='order_zt_top'>
+    <text>状态：</text>
+    <text class='f00'>{{item.order_status}}</text>
+  </view>
+  <view class='order_zt_top'>
+    <text>总价：</text>
+    <text class='f00'>￥{{item.price_sum}}</text>
+  </view>
+  <navigator url='/pages/order_details/order_details?id={{item.id}}'>查看详情</navigator>
+</view>
+  </block>
+
+
+
+

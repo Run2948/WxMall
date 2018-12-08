@@ -1,0 +1,5 @@
+/* pages/notice/notice.wxss */
+@import "../pub_top/pub_top.wxss";
+.li{border-bottom: 1px solid #eee;padding: 20rpx 30rpx;}
+.p{font-size: 28rpx;color: #333;}
+.ckxq{font-size: 22rpx;color: #ff0080;margin-top: 8rpx;text-align: right;}

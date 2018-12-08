@@ -1,0 +1,6 @@
+<!--优惠券pages/coupon/coupon.wxml-->
+
+<view class='thqnav'>
+  <view>可使用</view>
+  <view class='on'>不可用</view>
+</view>

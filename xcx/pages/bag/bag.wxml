@@ -1,0 +1,23 @@
+<!--钱包pages/bag/bag.wxml-->
+<view class='dqye'>账户余额：<text>{{user.userMoney}}</text><view class='huanbtn' bindtap='openRecharge'>立即充值</view></view>
+<scroll-view scroll-y="true" class="scoll-h" bindscrolltolower="bindDownLoad" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+<view class='jxmx'>
+  <view class='tit'>
+    <view class='time'>时间</view>
+    <view class='num'>余额</view>
+    <view class='describe'>描述</view>
+  </view>
+  <block wx:for="{{list}}" wx:key="{{item.id}}">
+  <view class='li'>
+    <view class='time'>{{item.createdTime}}</view>
+    <view class='num'>{{item.price}}</view>
+    <view class='describe'>{{item.note}}</view>
+  </view>
+  </block>
+</view>
+</scroll-view>
+ <view>
+    <loading hidden="{{hidden}}">
+      加载中...
+    </loading>
+  </view>

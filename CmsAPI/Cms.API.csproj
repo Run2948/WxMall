@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5DD5DDBB-EDE7-44A9-A4EA-71760B4C4519}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cms.API</RootNamespace>
+    <AssemblyName>Cms.API</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LitJSON">
+      <HintPath>..\..\..\蒋亮\微信源码3\dll\LitJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\wxpay\CommonUtil.cs" />
+    <Compile Include="Payment\wxpay\comm\MD5Util.cs" />
+    <Compile Include="Payment\wxpay\comm\SHA1Util.cs" />
+    <Compile Include="Payment\wxpay\comm\TenpayUtil.cs" />
+    <Compile Include="Payment\wxpay\Example.cs" />
+    <Compile Include="Payment\wxpay\FaHuoProc.cs" />
+    <Compile Include="Payment\wxpay\MD5SignUtil.cs" />
+    <Compile Include="Payment\wxpay\RequestHandler.cs" />
+    <Compile Include="Payment\wxpay\ResponseHandler.cs" />
+    <Compile Include="Payment\wxpay\SDKRuntimeException.cs" />
+    <Compile Include="Payment\wxpay\tuikuan\CheckRequestHandler.cs" />
+    <Compile Include="Payment\wxpay\tuikuan\ClientResponseHandler.cs" />
+    <Compile Include="Payment\wxpay\tuikuan\RequestHandler.cs" />
+    <Compile Include="Payment\wxpay\tuikuan\ResponseHandler.cs" />
+    <Compile Include="Payment\wxpay\tuikuan\TenpayHttpClient.cs" />
+    <Compile Include="Payment\wxpay\WxPayHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CmsBLL\Cms.BLL.csproj">
+      <Project>{A58A3660-FC2F-453D-A0E6-8AFC994D2797}</Project>
+      <Name>Cms.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CmsCommon\Cms.Common.csproj">
+      <Project>{901BD426-40F4-418A-AA3E-4D380D9F9309}</Project>
+      <Name>Cms.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CmsModel\Cms.Model.csproj">
+      <Project>{8BFCEBAD-0069-484A-A51A-CFEDC6E4399C}</Project>
+      <Name>Cms.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

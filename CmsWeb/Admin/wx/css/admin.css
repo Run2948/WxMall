@@ -1,0 +1,90 @@
+BODY {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; FONT-FAMILY: "Microsoft YaHei",Arial,"SimSun"; PADDING-TOP: 0px; -webkit-text-size-adjust: none
+}
+THEAD {
+	BACKGROUND-COLOR: #f6f6f6
+}
+.table {
+	MARGIN-BOTTOM: 0px
+}
+.tb-toolbar {
+	BORDER-BOTTOM: #e3eff3 1px solid; TEXT-ALIGN: left; PADDING-BOTTOM: 0px; LINE-HEIGHT: 30px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; MARGIN-BOTTOM: 5px; BACKGROUND: #f6f6f6; HEIGHT: 30px; PADDING-TOP: 0px
+}
+.maroon {
+	PADDING-LEFT: 2px; FONT-FAMILY: "SimSun"; COLOR: #d20000
+}
+.blue {
+	COLOR: #1bb0f0
+}
+.red {
+	COLOR: #f00
+}
+.green {
+	COLOR: #5aa700
+}
+.tangerine {
+	COLOR: #f60
+}
+.bold {
+	FONT-WEIGHT: bold
+}
+.fn-clear:after {
+	DISPLAY: block; HEIGHT: 0px; VISIBILITY: hidden; CLEAR: both; FONT-SIZE: 0px; CONTENT: " "
+}
+.fn-clear {
+	ZOOM: 1
+}
+.tab-header {
+	MARGIN: 10px 0px; HEIGHT: 28px
+}
+.tab-header .tab-title {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 28px; BACKGROUND-COLOR: #40a61a; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; FLOAT: left; HEIGHT: 100%; COLOR: white; FONT-SIZE: 14px; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.tab-header .icon {
+	BACKGROUND-IMAGE: url(/media/images/admin/1admin.png); LINE-HEIGHT: 24px; MARGIN-TOP: -1px; WIDTH: 24px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 24px; VERTICAL-ALIGN: text-top; MARGIN-RIGHT: 6px
+}
+.icon-account {
+	BACKGROUND-POSITION: -105px -59px
+}
+.icon-vip {
+	BACKGROUND-POSITION: -139px -58px
+}
+.icon-service {
+	BACKGROUND-POSITION: -76px -59px
+}
+.icon-chart {
+	BACKGROUND-POSITION: -45px -60px
+}
+.nav-tabs {
+	BACKGROUND-COLOR: #434343
+}
+.nav-tabs > LI {
+	MARGIN-TOP: 2px; MARGIN-LEFT: 1px
+}
+.nav-tabs > LI > A {
+	PADDING-BOTTOM: 8px; PADDING-LEFT: 22px; PADDING-RIGHT: 22px; COLOR: #fff; FONT-SIZE: 15px; FONT-WEIGHT: bold; PADDING-TOP: 8px; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0
+}
+.nav-tabs > LI:hover A {
+	COLOR: #434343
+}
+.nav-tabs > .active > A {
+	COLOR: #434343
+}
+.nav-tabs > .active > A:hover {
+	COLOR: #434343
+}
+.hidden {
+	DISPLAY: none
+}
+.help-link {
+	PADDING-LEFT: 20px; BACKGROUND: url(/media/images/admin/2help.png) no-repeat; COLOR: red; MARGIN-LEFT: 10px; FONT-SIZE: 18px; CURSOR: pointer; FONT-WEIGHT: normal; TEXT-DECORATION: underline
+}
+.help-link-video {
+	COLOR: red; FONT-SIZE: 18px; CURSOR: pointer; FONT-WEIGHT: normal; TEXT-DECORATION: underline
+}
+SPAN.success {
+	COLOR: green
+}
+SPAN.failure {
+	COLOR: red
+}

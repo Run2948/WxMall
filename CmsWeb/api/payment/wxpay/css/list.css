@@ -1,0 +1,395 @@
+body, div, p, ul, ol, li, textarea, form, input, h1, h2, h3, h4, h5, dl, dt, dd, img, section, article, aside, header, footer, nav, dialog, figure, hgroup
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-color: #E8E8E8;
+    background-image: url(../images/bg_body.png);
+    -webkit-background-size: 20px auto;
+    font-family: "\5FAE\8F6F\96C5\9ED1",Helvetica;
+    min-width: 320px;
+    -webkit-text-size-adjust: none;
+    font-size: 12px;
+    color: #5B5B5B;
+    overflow-x: hidden;
+}
+
+ul, ol, li
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: #252E32;
+}
+
+    a:visited
+    {
+        color: #252E32;
+    }
+
+.btn_room, .ico_add:before, .ico_rec:before, .ico_tel:before, .ico_youhui:before, .ico_traffic:before, .ico_food:before, .ico_play:before, .ico_hot:before, .mod_list li:before, .mod_more li:before, .ico_more, .ico_day:before, .mod_line li:before, .mod_line li h3:before, .icon_car:before, .ico_star, .ico_airplane:before, .ico_train:before, .ico_auto:before, .ico_subway:before, .ico_taxi:before, .ico_bus:before, .ico_bus_water:before, .ico_bike:before, .ico_open, .ico_close, .jifen_num:before, .jifen_list li:before, .pop_rule .pop_close, .ico_order:before, .room_name:before, .shop_area a:before, .ico_date:before, .ico_map:before, .ico_recom, .map:before, .ico_hotel_gps, .ico_hotel_map, .zoom_in, .zoom_out, .zoom_in_current, .zoom_out_current, .city_list a:before, .shop_item a:before
+{
+    display: inline-block;
+    content: "";
+    background-image: url(../images/sprite.png);
+    -webkit-background-size: 250px auto;
+}
+
+.mod_item_list
+{
+    border-bottom: 1px solid #FFF;
+    width: 100%;
+}
+
+    .mod_item_list li
+    {
+        border-bottom: 1px solid #D0D0D0;
+        border-top: 1px solid #FFF;
+        position: relative;
+        padding: 15px 0;
+    }
+
+        .mod_item_list li:first-child
+        {
+            border-top: none;
+        }
+
+.city_select .city_list li a, .shop_list .shop_item a
+{
+    display: block;
+    line-height: 55px;
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+.mod_item_list li.shop_item
+{
+    padding: 0;
+}
+
+.city_select .city_list li a:before, .shop_list .shop_item a:before
+{
+    position: absolute;
+    right: 11px;
+    top: 20px;
+}
+
+.ico_more, .mod_more li:before, .room_name:before, .shop_area a:before, .city_list a:before, .shop_item a:before
+{
+    width: 9px;
+    height: 13px;
+    background-position: -20px -80px;
+}
+
+.mod_item_list li:nth-child(even)
+{
+    background-color: #E8E8E8;
+    background-image: url(../images/bg_body_hover.png);
+    -webkit-background-size: 20px auto;
+}
+
+.city_select .city_list li
+{
+    padding: 0;
+    height: 55px;
+}
+
+.shop_list li h2
+{
+    font-size: 15px;
+    color: #262626;
+    padding-left: 10px;
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+
+.shop_list li .con
+{
+    padding: 0 60px 0 24px;
+    position: relative;
+    color: #767676;
+}
+
+.shop_list li .ico_map:before
+{
+    position: absolute;
+    left: 10px;
+    top: 2px;
+}
+
+.ico_map:before
+{
+    width: 14px;
+    height: 12px;
+    background-position: -20px -120px;
+}
+
+.shop_list li .distance
+{
+    position: absolute;
+    top: 16px;
+    right: 9px;
+    color: #767676;
+    text-align: right;
+}
+
+.show_pic
+{
+    margin-bottom: 1px;
+    max-height: 380px;
+}
+
+.show_price
+{
+    height: 45px;
+    background: #EBECEC;
+    -webkit-box-shadow: 0 2px 4px rgba(1,2,2,.2);
+    position: relative;
+}
+
+    .show_price .title
+    {
+        padding-left: 9px;
+        color: #333738;
+        font-weight: bold;
+        padding-right: 2px;
+        text-shadow: 0 1px 1px #FFF;
+        font-size: 18px;
+        position: relative;
+        top: 5px;
+        line-height: 34px;
+    }
+
+.hot
+{
+    color: #FF4200;
+}
+
+.kongxian
+{
+    color: #7A14F3;
+}
+
+.yiban
+{
+    color: #95D11B;
+}
+
+.yiman
+{
+    color: #F10D58;
+}
+
+.show_price .yuan
+{
+    position: relative;
+    top: -7px;
+    font-size: 16px;
+    text-shadow: 0 0 1px #FF4200;
+}
+
+.show_price .num
+{
+    font-size: 30px;
+    padding-right: 2px;
+    text-shadow: 0 0 1px #FF4200;
+}
+
+.show_price .text
+{
+    text-shadow: 0 1px 1px #FFF;
+}
+
+.btn_room
+{
+    background-position: 0 0;
+    width: 103px;
+    height: 34px;
+}
+
+.show_price .btn_room
+{
+    position: absolute;
+    right: 8px;
+    top: 4px;
+}
+
+.btn_room span
+{
+    display: none;
+}
+
+.detail_main
+{
+    margin: 0 10px;
+    padding-top: 12px;
+}
+
+    .detail_main .hotel_address
+    {
+        padding: 0 0 10px 0;
+    }
+
+.hotel_address p
+{
+    color: #686868;
+    text-shadow: 0 1px 1px #FFF;
+    padding-left: 18px;
+    position: relative;
+    margin-bottom: 3px;
+}
+
+#map img
+{
+    width: 100%;
+}
+
+.hotel_address .ico_add:before, .hotel_address .ico_tel:before
+{
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+.ico_add:before
+{
+    width: 9px;
+    height: 12px;
+    background-position: -20px -40px;
+}
+
+.ico_tel:before
+{
+    width: 9px;
+    height: 13px;
+    background-position: -20px -60px;
+}
+
+.mod_con
+{
+    margin-bottom: 13px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(190,190,190,.8);
+    background: #FFF;
+}
+
+.ico_traffic:before
+{
+    background-position: 0 -60px;
+}
+
+.ico_youhui:before, .ico_traffic:before, .ico_food:before, .ico_play:before
+{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 9px;
+    top: 8px;
+}
+
+.mod_con h2
+{
+    font-size: 14px;
+    color: #333;
+    padding-left: 30px;
+    text-shadow: 0 1px 1px #FFF;
+    line-height: 34px;
+    position: relative;
+    background: -webkit-gradient(linear,left top,left bottom,from(#F5F4F3),to(#EEEBEA));
+    border-bottom: 1px solid #E0DDDC;
+    border-radius: 5px 5px 0 0;
+}
+
+.page-url
+{
+    margin-top: 10px;
+    border-top: 1px solid #E5E5E5;
+    text-align: center;
+}
+
+.page-url-link
+{
+    font-size: 14px;
+    line-height: 2.5;
+    text-decoration: none;
+    text-shadow: 0 1px white;
+    -webkit-text-shadow: 0 1px #fff;
+    -moz-text-shadow: 0 1px #fff;
+   
+}
+
+.nodata
+{
+    text-align: center;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+/** 2013-11-22 add lipu **/
+.div_rtimes
+{
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 4px;
+    margin: 10px 1px 4px 1px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+    display:none;
+}
+
+    .div_rtimes ul
+    {
+        width: 100%;
+        overflow: hidden;
+        list-style: none outside none;
+        margin: 0;
+        padding: 0;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+        .div_rtimes ul li:nth-child(-n+3)
+        {
+            border-top: 0 none;
+        }
+
+        .div_rtimes ul li
+        {
+            width: 33.3%;
+            float: left;
+            font-size: 15px;
+            border-top: 1px solid #e7ecef;
+            display: list-item;
+            text-align: -webkit-match-parent;
+            list-style: none;
+        }
+
+            .div_rtimes ul li a
+            {
+                display: block;
+                border-right: 1px solid #e7ecef;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                padding: 20px 5px;
+                height: 100%;
+                text-align: center;
+                text-decoration: none;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0.35);
+                color: #000000;
+            }
+
+.li_hasyd {
+    background-color:red;
+}
+.li_hasguoqi
+{
+     background-color:#505655;
+}
+/** 2013-11-22 add lipu **/

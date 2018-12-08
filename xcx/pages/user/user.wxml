@@ -1,0 +1,81 @@
+<!--pages/user/user.wxml-->
+<include src="../footer/footer.wxml"/>
+<view class='user_top'>
+  <image src='../images/my_top_back.jpg' class='top_img'></image>
+  <view class='tx'><image src='{{user.headimgurl}}'></image></view>
+  <view class='nicheng'>
+   <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" bindtap='login'>点击登录</button>
+   <view wx:else>
+    <text class='title'>{{user.username}}</text>
+    <text class='title' style=" padding-top:10px;">{{user.usercard}}</text>
+    <text class='text'>余额￥{{user.userMoney}}</text>
+    <text class='jifen'>积分：{{user.userscore}}</text>
+    </view>
+  </view>
+</view>
+ <view class='muen'>
+  <navigator url='/pages/order/order' class='nav'>我的订单</navigator>
+  <navigator url='/pages/bag/bag' class='nav'>我的钱包</navigator>
+  <navigator url='/pages/coupon/coupon' class='nav'>优惠券</navigator>
+</view> 
+<view class='muen_box'>
+  <navigator url='/pages/order/order' class='nav_muen'>
+    <image src='../images/my_icon1.png'></image>
+    待支付
+    <block wx:if="{{isPay > 0}}">
+    <text class='icon'>{{isPay}}</text>
+    </block>
+  </navigator>
+  <navigator url='/pages/order/order' class='nav_muen'>
+    <image src='../images/my_icon2.png'></image>
+    待发货
+    <block wx:if="{{isDelivery > 0}}">
+    <text class='icon'>{{isDelivery}}</text>
+    </block>
+  </navigator>
+  <navigator url='/pages/order/order' class='nav_muen'>
+    <image src='../images/my_icon3.png'></image>
+    待收货
+    <block wx:if="{{isReceiving> 0}}">
+    <text class='icon'>{{isReceiving}}</text>
+    </block>
+  </navigator>
+  <navigator url='/pages/order/order' class='nav_muen'>
+    <image src='../images/my_icon4.png'></image>
+    已完成
+   <block wx:if="{{isTransaction > 0}}">
+    <text class='icon'>{{isTransaction}}</text>
+    </block>
+  </navigator>
+</view>
+<view class='list'>
+   <navigator class='li' url='/pages/bag/bag'>
+    <image src='../images/uesr_icon1.png'></image>
+    <text>我的钱包</text>
+  </navigator>
+  <navigator class='li' url='/pages/integral/integral'>
+    <image src='../images/uesr_icon2.png'></image>
+    <text>我的积分</text>
+  </navigator>
+  <navigator class='li' url='/pages/recharge/recharge'>
+    <image src='../images/uesr_icon3.png'></image>
+    <text>充值中心</text>
+  </navigator>
+  <navigator class='li' url='/pages/coupon/coupon'>
+    <image src='../images/uesr_icon4.png'></image>
+    <text>我的优惠券</text>
+  </navigator> 
+  <navigator class='li' url='/pages/selectAddress/selectAddress'>
+    <image src='../images/uesr_icon5.png'></image>
+    <text>地址管理</text>
+  </navigator>
+ 
+  <navigator class='li' bindtap='calling' data-mobile='{{webSite.telphone}}'>
+    <image src='../images/uesr_icon7.png'></image>
+    <text>客服中心</text>
+  </navigator>
+</view>
+<!-- <view class='xysd'>
+  <image src='../images/xysd.png'></image>
+  <text>由祥云时代提供技术支持</text>
+</view> -->

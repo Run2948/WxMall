@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/gift_list/gift_list",
+    "pages/cartIntegral/cartIntegral",
+    "pages/con_order_integarl/con_order_integarl",
+    "pages/notice/notice",
+    "pages/noticeDe/noticeDe",
+    "pages/coupon/coupon",
+    "pages/bag/bag",
+    "pages/integral/integral",
+    "pages/recharge/recharge",
+    "pages/order/order",
+    "pages/goods_list/goods_list",
+    "pages/con_order/con_order",
+    "pages/cart/cart",
+    "pages/classification/classification",
+    "pages/selectAddress/selectAddress",
+    "pages/details/details",
+    "pages/address/address",
+    "pages/user/user",
+    "pages/order_details/order_details",
+    "pages/pub_top/pub_top",
+    "pages/footer/footer"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "链鲜生活配送",
+    "navigationBarTextStyle": "black"
+  }
+}

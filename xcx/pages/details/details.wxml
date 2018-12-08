@@ -1,0 +1,102 @@
+
+<view class='detail'>
+  <image src='{{hostUrl}}{{model.litpic}}' mode='widthFix'></image>
+</view>
+<view class='detail_text'>
+  <text class='title'>{{model.name}}</text>
+  <text class='text'>规格:/{{model.unit}}  单位:斤</text>
+  <view class='jiege'>
+    <text class='small'>￥</text>
+    <text class='yuan'>{{model.price}}</text>
+    <text class='jiao'></text>
+    <text class='del'>￥{{model.marketPrice}}</text>
+    <text class='kucun'>库存：{{model.stock}}</text>
+    <text class='xiao'>销量：{{model.sales}}</text>
+  </view>
+</view>
+<view class='switch'>
+  <!-- 选择状态加class=“active” -->
+  <navigator open-type='switchTab' hover-class='none' class='active'>商品详情</navigator>
+  <navigator open-type='switchTab' hover-class='none'></navigator>
+</view>
+<view class='img_box'>
+ <import src="/wxParse/wxParse.wxml" />
+      <view class="wxParse">
+      <template is="wxParse" data="{{wxParseData:content.nodes}}"></template>
+      </view>
+</view>
+<view class='fix_bot'>
+  <view class='jia'>
+    <view class='jiage_box'>
+      <text class='small'>￥</text>
+      <text class='yuan'>{{model.price}}</text>
+      <text class='jiao'></text>
+    </view>
+    <text class='jiesheng'>为您节省￥{{minprice}}</text>
+  </view>
+    <button class='cart' bindtap='chooseModel' data-id='{{model.id}}' data-unit='{{model.unit}}'>加入购物车</button>
+     <button class='book' bindtap='chooseModel' data-id='{{model.id}}' data-unit='{{model.unit}}'>立即购买</button> 
+</view>
+<!-- 选规格 -->
+<view class="ceng" hidden='{{showCeng}}' bindtap='closeAllLayer'></view>
+<view class="xguige"hidden='{{showModel}}'>
+	<view class="close" bindtap='closeAllLayer'><image src="../images/gbico.png"></image></view>
+	<view class="guigecon">
+		<view class="spinfo">
+			<image src='{{hostUrl}}{{model.litpic}}'></image>
+			<view class="spinfor">
+				<view>价格<text>¥{{model.price}}</text></view>
+				<view>库存：{{model.stock}}</view>
+				<view>已选择：{{quantity}} 份</view>
+			</view>
+		</view>
+		<view class="xzgg">
+			<view>选择规格</view>
+			<view class='a active'>份</view>
+		</view>
+		<view class="xzgg">
+			<view>选择规格</view>
+			<view class="num">
+				<view class="jian" bindtap='jian'>-</view>
+				<input type="text" name="" class="numipt"  value="{{quantity}}" />
+				<view class="jia" bindtap='jia'>+</view>
+			</view>
+		</view>
+	</view>
+	<view class="xqbtn fix">
+		<button class="ljgma active" bindtap='book' data-id='{{model.id}}' data-unit='{{model.unit}}'>立即购买</button>
+		<button class="gwca"  bindtap='cart' data-id='{{model.id}}' data-unit='{{model.unit}}'>加入购物车</button>
+	</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

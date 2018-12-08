@@ -1,0 +1,77 @@
+<!--pages/order_details/order_details.wxml-->
+<view class='text_box first'>
+  <text>订   单   号:</text>
+  <text>{{order.order_num}}</text>
+</view>
+<view class='text_box last'>
+  <text>订单状态:</text>
+  <text class='cl_3b40df'>{{orderStatus}}</text>
+</view>
+<view class='text_box height'>
+  <text>收 货 人:</text>
+  <text>{{address.consignee}}  {{address.cellphone}}</text>
+</view>
+<block wx:for="{{orderSubList}}" wx:key="{{item.id}}">
+  <view class='order'>
+    <image src='{{hostUrl}}{{item.litpic}}' class='order_img'></image>
+    <view class='order_xx'>
+      <text class='left'>{{item.title}}</text>
+      <text class='cl_df0c1d right'>￥{{item.price}}</text>
+    </view>
+    <view class='order_xx'>
+      <text class='left'>规格:/{{item.property_value}}</text>
+      <text class='del right'>￥{{item.marketPrice}}</text>
+    </view>
+    <view class='order_xx'>
+      <text class='right'>X{{item.quantity}}</text>
+    </view>
+  </view>
+</block>
+<view class='fangshi'>
+  <view class='weixin what'>
+    <text class='left'>支付方式：</text>
+    <text class='right'>微信支付</text>
+  </view>
+  <view class='weixin fs_last'>
+    <text class='left'>配送方式：</text>
+    <text class='right'>{{order.shipping_method}}</text>
+  </view>
+</view>
+<view class='spxx'>
+  <view class='spxx_box'>
+    <text class='left'>商品金额</text>
+    <text class='right'>{{order.price_sum}}</text>
+  </view>
+  <view class='spxx_box'>
+    <text class='left'>运费</text>
+    <text class='right'>+￥0</text>
+  </view>
+  <view class='spxx_box'>
+    <text class='left'>优惠金额</text>
+    <text class='right'>-￥0</text>
+  </view>
+  <view class='spxx_box spxx_last'>
+    <text class='left'>实付款</text>
+    <text class='right'>￥{{order.price_sum}}</text>
+  </view>
+</view>
+<view class='fangshi time_box'>
+  <view class='weixin time'>
+    <text class='left'>提交时间:</text>
+    <text class='right'>{{order.updateTime}}</text>
+  </view>
+  <view class='weixin time'>
+    <text class='left'>自提时间:</text>
+    <text class='right'>2018-03-23 12:05:00</text>
+  </view>
+</view>
+<view class='bottom'>
+  <block wx:if="{{order.is_payment==0}}">
+   <block wx:if="{{order.order_status==0}}">
+    <button bindtap='pay' data-id='{{order.id}}'>立即支付</button>
+    </block>
+    <block wx:if="{{order.order_status==0}}">
+      <button bindtap='canalOrder' data-id='{{order.id}}'>取消订单</button>
+    </block>
+  </block>
+</view>

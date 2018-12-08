@@ -1,0 +1,171 @@
+/* pages/goods_list/goods_list.wxss */
+@import "../footer/footer.wxss";
+.search{
+  width: 94%;
+  height: 80rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #d7d7d7;
+  border-radius: 10rpx;
+  margin: 15rpx auto 0;
+  position: relative
+}
+.search image{
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  top: 27rpx;
+  left: 25rpx;
+}
+.search input{
+  display: block;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  color: #333;
+  padding: 14rpx 0 14rpx 95rpx;
+}
+.switch_box{
+ width: 100%;
+ height: 85rpx;
+ line-height: 85rpx;
+ font-size: 28rpx;
+ color: #030303;
+ text-align: center;
+ display: flex
+}
+.switch_box view{
+  flex: 1;
+  border-bottom: 2rpx solid #fff;
+  text-align: center;
+  line-height: 85rpx;
+  height: 85rpx;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+}
+.switch_box view.active{
+  border-color: #9c9c9c;
+  color: #dc4e49;
+}
+.switch_box view text{
+  display: inline-block;
+  padding-right: 10rpx;
+  font-size: 28rpx;
+}
+.switch_box view image{
+  display: inline-block;
+  width: 14rpx;
+  height: 30rpx;
+  line-height: 85rpx;
+}
+.switch_box view image.hide{
+  display: none;
+}
+.switch_box view image.show{
+  display: inline-block;
+}
+.list_box{
+  width: 97%;
+  padding: 20rpx 1.5% 120rpx;
+  overflow: hidden;
+  background: #efeef4;
+}
+.good{
+  width: 47%;
+  margin: 1.5%;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 20rpx;
+  float: left
+}
+.img{
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+.img text{
+  display: inline-block;
+  background: #b3b3b3;
+  color: #fff;
+  text-align: center;
+  font-size: 16rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding: 0 8rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0
+}
+.good image{
+  width: 100%;
+  height: 300rpx;
+  display: block;
+}
+.title{
+  height: 84rpx;
+  line-height: 42rpx;
+  font-size: 28rpx;
+  color: #4c4c4c;
+  display: block;
+}
+.jiege{
+  height: 90rpx;
+  position: relative
+}
+.jiage_box{
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  height: 45rpx;
+}
+.jiege text{
+  display: block;
+  float: left
+}
+.jiege text.small{
+  color: #df0c1d;
+  font-size: 28rpx;
+  line-height: 55rpx;
+}
+.jiege text.yuan{
+  color: #df0c1d;
+  font-size: 40rpx;
+}
+.jiege text.jiao{
+  color: #df0c1d;
+  font-size: 24rpx;
+  line-height: 55rpx;
+}
+.jiege text.del{
+  font-size: 24rpx;
+  color: #666;
+  line-height: 45rpx;
+  margin-left: 15rpx;
+  text-decoration: line-through;
+  float: left
+}
+.jiege navigator{
+  width: 65rpx;
+  height: 65rpx;
+  background: #ff0080;
+  border-radius: 10rpx;
+  position: absolute;
+  right: 0;
+  top: 17rpx;
+}
+.jiege navigator image{
+  display: block;
+  margin: 15rpx auto;
+  width: 37rpx;
+  height: 34rpx;
+}
+.list_box .ling{
+  width: 100%;
+  text-align: center;
+  display: block;
+  font-size: 24rpx;
+  color: #666;
+  line-height: 50rpx;
+}

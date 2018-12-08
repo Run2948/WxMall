@@ -1,0 +1,75 @@
+/* pages/cart/cart.wxss */
+@import "../pub_top/pub_top.wxss";
+@import "../footer/footer.wxss";
+.box{padding-bottom: 224rpx;}
+page{background: #f2f2f2;}
+.list{background: #fff;margin-top: 22rpx;padding: 25rpx 30rpx;display: flex;display: -webkit-flex;align-items: center;position: relative;}
+heckbox .wx-checkbox-input{width: 15px;height: 15px;}
+.spimg{width: 175rpx;height: 175rpx;display: block;margin: 0 25rpx 0 20rpx;}
+.info{flex: 1;display: flex;display: -webkit-flex;}
+.info_l{flex: 1;margin-right: 20rpx;}
+.spname{font-size: 28rpx;color: #4c4c4c;}
+.spname text{color: #333;}
+.guige{font-size: 24rpx;color: #999;margin: 18rpx 0 23rpx;}
+.edit{width: 253rpx;height: 59rpx;border: 2rpx solid #cacaca;border-radius: 10rpx;display: flex;display: -webkit-flex;}
+.edit button{font-size: 40rpx;color: #6a6a6a;height: 59rpx;line-height: 59rpx;width: 59rpx;border-radius: 0;}
+.num{height: 59rpx;line-height: 59rpx;text-align: center;flex: 1;font-size: 30rpx;color: #6a6a6a;}
+.price{text-align: right;}
+.xian{font-size: 40rpx;color: #df0c1d;}
+.xian text{font-size: 24rpx;}
+.xian text.fuhao{font-size: 30rpx;}
+.yuanq{font-size: 24rpx;color: #999;margin-top: 25rpx;}
+
+.fix_bot{
+height: 100rpx;
+width: 100%;
+position: fixed;
+left: 0;
+bottom: 106rpx;
+z-index: 9;
+background: #fff;
+display: flex;display: -webkit-flex;align-items: center;
+}
+.jia{
+padding-left: 18rpx;
+}
+.jiage_box{
+display: block;margin-bottom: 10rpx;
+}
+.jiesheng{
+display: block;
+height: 35rpx;
+line-height: 35rpx;
+color: #999;
+font-size: 24rpx;
+}
+.fix_bot navigator{
+width: 234rpx;
+height: 100rpx;
+background: #df0c1d;
+color: #fff;
+font-size: 32rpx;
+position: absolute;
+right: 0;
+top: 0;
+text-align: center;
+line-height: 100rpx;
+}
+.jiage_box text.small{
+color: #df0c1d;
+font-size: 28rpx;
+}
+.jiage_box text.yuan{
+color: #df0c1d;
+font-size: 40rpx;
+}
+.jiage_box text.jiao{
+color: #df0c1d;
+font-size: 24rpx;
+}
+.quan{font-size: 32rpx;color: #333;padding-left: 33rpx;}
+.quan text{margin-left: 25rpx;}
+
+
+
+.del{position: absolute;right: 0;bottom: 0;background: #f00;color: #fff;font-size: 28rpx;padding: 20rpx 25rpx;display: none;}

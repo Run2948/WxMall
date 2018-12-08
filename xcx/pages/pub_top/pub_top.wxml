@@ -1,0 +1,35 @@
+<!--pages/pub_top/pub_top.wxml-->
+<view class='pub_top'>
+  <image src='../images/fanhui.png'></image>
+  <button></button>
+  <text>头部标题</text>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

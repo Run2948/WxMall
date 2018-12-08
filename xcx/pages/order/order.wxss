@@ -1,0 +1,135 @@
+/* pages/order/order.wxss */
+@import "../pub_top/pub_top.wxss";
+@import "../footer/footer.wxss";
+.search{
+  width: 94%;
+  height: 80rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #d7d7d7;
+  border-radius: 10rpx;
+  margin: 15rpx auto 0;
+  position: relative
+}
+.search image{
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  top: 27rpx;
+  left: 25rpx;
+}
+.search input{
+  display: block;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  color: #333;
+  padding: 14rpx 0 14rpx 95rpx;
+}
+.switch_box{
+ width: 100%;
+ height: 85rpx;
+ line-height: 85rpx;
+ font-size: 28rpx;
+ color: #030303;
+ text-align: center;
+ display: flex
+}
+.switch_box navigator{
+  flex: 1;
+  border-bottom: 2rpx solid #fff;
+}
+.switch_box navigator.active{
+  border-color: #dc4e49;
+  color: #dc4e49;
+}
+.order_hao{
+  padding: 0 3%;
+  display: block;
+  height: 85rpx;
+  line-height: 85rpx;
+  border-bottom: 1rpx solid #878787;
+  font-size: 28rpx;
+}
+.order_hao text.left{
+  float: left;
+  display: block;
+  color: #030303
+}
+.order_hao text.right{
+  color: #999;
+  float: right
+}
+.order{
+  width: 94%;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid #878787;
+  height: 130rpx;
+  position: relative;
+  margin: 0 auto;
+}
+.order_img{
+  width: 130rpx;
+  height: 130rpx;
+  position: absolute;
+  left: 0;
+  top: 24rpx;
+}
+.order_xx{
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 150rpx;
+  height: 43rpx;
+  line-height: 43rpx;
+  font-size: 28rpx;
+  color: #999
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.order_zt{
+  padding: 0 3%;
+  height: 86rpx;
+  position: relative
+}
+.order_zt_top{
+  height: 43rpx;
+  line-height: 43rpx;
+  font-size: 24rpx;
+}
+.order_zt_top .f00{
+  color: #f00;
+}
+.order_zt navigator{
+  width: 170rpx;
+  height: 60rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #d3d3d3;
+  border-radius: 5rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: #383838;
+  font-size: 28rpx;
+  position: absolute;
+  right: 3%;
+  top: 11rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

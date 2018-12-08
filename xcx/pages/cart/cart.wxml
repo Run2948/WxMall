@@ -1,0 +1,44 @@
+<!--购物车-->
+<view class='box'>
+<block wx:for="{{cartList}}" wx:key="{{item.id}}">
+  <view class='list'>
+    <checkbox color='#5397fb' wx:if="{{item.is_checked==2}}" bindtap='choice' checked="{{item.checked}}" data-id='{{item.id}}' data-ischecked='{{item.is_checked}}' value='{{item.is_checked}}' ></checkbox>
+     <checkbox color='#5397fb' wx:else bindtap='choice' data-id='{{item.id}}' data-ischecked='{{item.is_checked}}' value='{{item.is_checked}}' ></checkbox>
+    <image src='{{hostUrl}}{{item.litpic}}' mode='aspectFill' class='spimg'></image>
+    <view class='info'>
+      <view class='info_l'>
+        <view class='spname'>{{item.title}}</view>
+        <view class='guige'>规格:/{{item.property_value}}</view>
+        <view class='edit'>
+          <button class='jian' bindtap='jian' data-id='{{item.id}}'>-</button>
+          <input value='{{item.quantity}}' class='num'></input>
+          <button class='jia' bindtap='jia' data-id='{{item.id}}'>+</button>
+        </view>
+      </view>
+      <view class='price'>
+        <view class='xian'><text class='fuhao'>￥</text>{{item.price}}<text></text></view>
+        <view class='yuan'>￥{{item.marketPrice}}</view>
+      </view>
+    </view>
+     <view class='del'  wx:if="{{item.is_checked==2}}" bindtap='delCart' data-id='{{item.id}}'  style='display:block;'>删除</view>
+     <view class='del' wx:else bindtap='delCart' data-id='{{item.id}}'  >删除</view>
+  </view>
+  </block>
+</view>
+<view class='fix_bot'>
+  <view class='quan'>
+    <label><checkbox color='#5397fb' wx:if="{{selection==2}}" bindtap='selection' checked='true'  data-id='{{selection}}' value='{{selection}}'></checkbox>
+    <checkbox color='#5397fb' wx:else bindtap='selection' data-id='{{selection}}' value='{{selection}}'></checkbox>
+    <text>全选</text></label>
+  </view>
+  <view class='jia'>
+    <view class='jiage_box'>
+      <text class='small'>￥</text>
+      <text class='yuan'>{{dTotal}}</text>
+      <text class='jiao'></text>
+    </view>
+    <text class='jiesheng'>为您节省￥{{marketPriceTotal}}</text>
+  </view>
+  <navigator bindtap='buyNow'>去结算（{{quantity}}）</navigator>
+</view>
+<include src="../footer/footer.wxml"/>

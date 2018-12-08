@@ -1,0 +1,43 @@
+<!--pages/address/address.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class='address'>
+  <view class='li'>
+    <text>联系人：</text>
+    <input type='text' name="consignee" value='{{consignee}}'></input>
+  </view>
+  <view class='li'>
+    <text>手机号码：</text>
+    <input type='text' name="cellphone" value='{{cellphone}}'></input>
+  </view>
+  <view class='li'>
+    <text>详细地址：</text>
+    <input type='text' name="address" value='{{address}}' placeholder='街道、楼牌号等'></input>
+     
+  </view>
+  <input type='hidden' hidden='false' name="id" value='{{id}}'></input>
+</view>
+<view class='tijiao'>
+  <button form-type="submit">提交</button>
+</view>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

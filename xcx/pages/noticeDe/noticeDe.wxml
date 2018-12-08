@@ -1,0 +1,9 @@
+<!--公告pages/notice/notice.wxml-->
+
+<view class='li'>
+  <import src="/wxParse/wxParse.wxml" />
+      <view class="wxParse">
+      <template is="wxParse" data="{{wxParseData:article_content.nodes}}"></template>
+      </view>
+</view>
+

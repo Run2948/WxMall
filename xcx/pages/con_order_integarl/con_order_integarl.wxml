@@ -1,0 +1,4 @@
+<!--确认订单-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+
+</form>

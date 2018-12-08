@@ -1,0 +1,62 @@
+/* pages/address/address.wxss */
+@import "../pub_top/pub_top.wxss";
+page{
+  background: #f1f1f1;
+}
+.address{
+  overflow: hidden;
+  width: 94%;
+  padding: 0 3% 50rpx;
+  background: #fff
+}
+.li{
+  height: 100rpx;
+  line-height: 100rpx;
+  position: relative;
+  width: 100%;
+  border-bottom: 2rpx solid #cfcfd0;
+}
+.li text{
+  font-size: 28rpx;
+  color: #515151;
+  left: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: absolute;
+}
+.li input{
+  display: block;
+  padding: 25rpx 0;
+  padding-left: 165rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 24rpx;
+}
+.tijiao{
+  width: 80%;
+  position: fixed;
+  left: 10%;
+  bottom: 30rpx;
+}
+.tijiao button{
+  background: #e51c23;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #fff;
+  font-size: 35rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

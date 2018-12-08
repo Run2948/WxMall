@@ -1,0 +1,51 @@
+.txtArea {
+	WIDTH: 550px
+}
+.functionBar {
+	BORDER-BOTTOM: #aaa 1px solid; POSITION: relative; BORDER-LEFT: #aaa 1px solid; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; BORDER-TOP: #aaa 1px solid; BORDER-RIGHT: #aaa 1px solid; PADDING-TOP: 10px; box-shadow: 0 3px 3px #ddd; -webkit-box-shadow: 0 3px 3px #ddd; -moz-box-shadow: 0 3px 3px #ddd
+}
+.functionBar .opt {
+	FLOAT: left
+}
+.icon18C {
+	PADDING-LEFT: 18px; BACKGROUND: url(/media/images/admin/appmsg/1icon18.png) no-repeat 0px 0px
+}
+.iconEmotion {
+	BACKGROUND-POSITION: 0px -306px
+}
+.functionBar .tip {
+	FONT-STYLE: italic; FLOAT: right
+}
+.functionBar .emotions {
+	Z-INDEX: 9999; BORDER-BOTTOM: #aaa 1px solid; POSITION: absolute; BORDER-LEFT: #aaa 1px solid; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; DISPLAY: none; BORDER-TOP: #aaa 1px solid; TOP: 30px; BORDER-RIGHT: #aaa 1px solid; PADDING-TOP: 5px; LEFT: 20px
+}
+.functionBar .emotions TABLE TD {
+	BORDER-BOTTOM: #dfe6f6 1px solid; BORDER-LEFT: #dfe6f6 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BORDER-TOP: #dfe6f6 1px solid; BORDER-RIGHT: #dfe6f6 1px solid; PADDING-TOP: 1px
+}
+.functionBar .emotions TABLE TD:hover {
+	BORDER-BOTTOM: blue 1px solid; BORDER-LEFT: blue 1px solid; BORDER-TOP: blue 1px solid; BORDER-RIGHT: blue 1px solid
+}
+.functionBar .emotions TABLE TD DIV {
+	WIDTH: 24px; BACKGROUND: url(/media/images/admin/emotion/default.gif) no-repeat 0px 0px; HEIGHT: 24px; CURSOR: pointer
+}
+.functionBar .emotions .emotionsGif {
+	BORDER-BOTTOM: #aaa 1px solid; POSITION: absolute; TEXT-ALIGN: center; BORDER-LEFT: #aaa 1px solid; PADDING-BOTTOM: 20px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 20px; WIDTH: 24px; PADDING-RIGHT: 20px; HEIGHT: 24px; BORDER-TOP: #aaa 1px solid; TOP: -1px; BORDER-RIGHT: #aaa 1px solid; PADDING-TOP: 20px; LEFT: 430px
+}
+.clr {
+	CLEAR: both
+}
+.editArea {
+	BORDER-BOTTOM: #aaa 1px solid; BORDER-LEFT: #aaa 1px solid; PADDING-BOTTOM: 20px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; BORDER-TOP: #aaa 0px solid; BORDER-RIGHT: #aaa 1px solid; PADDING-TOP: 20px
+}
+.editArea TEXTAREA {
+	BORDER-BOTTOM: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; WIDTH: 100%; HEIGHT: 80px; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid
+}
+.editArea DIV {
+	BORDER-BOTTOM: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; WIDTH: 100%; HEIGHT: 80px; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid
+}
+.msgSenderPlugin .panel .editArea TEXTAREA {
+	BORDER-BOTTOM: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; WIDTH: 100%; HEIGHT: 80px; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid
+}
+.emotions TABLE {
+	BORDER-COLLAPSE: separate
+}
