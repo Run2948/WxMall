@@ -1,9 +1,0 @@
-F:\web\Net\CmsNet\CmsModel\bin\Debug\CmsModel.dll.config
-F:\web\Net\CmsNet\CmsModel\bin\Debug\CmsModel.dll
-F:\web\Net\CmsNet\CmsModel\bin\Debug\CmsModel.pdb
-F:\web\Net\CmsNet\CmsModel\obj\x86\Debug\ResolveAssemblyReference.cache
-F:\web\Net\CmsNet\CmsModel\obj\x86\Debug\CmsModel.Properties.Resources.resources
-F:\web\Net\CmsNet\CmsModel\obj\x86\Debug\GenerateResource.read.1.tlog
-F:\web\Net\CmsNet\CmsModel\obj\x86\Debug\GenerateResource.write.1.tlog
-F:\web\Net\CmsNet\CmsModel\obj\x86\Debug\CmsModel.dll
-F:\web\Net\CmsNet\CmsModel\obj\x86\Debug\CmsModel.pdb

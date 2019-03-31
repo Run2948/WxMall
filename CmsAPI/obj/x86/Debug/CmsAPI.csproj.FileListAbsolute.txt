@@ -1,9 +1,0 @@
-F:\web\Net\CmsNet\CmsAPI\bin\Debug\CmsAPI.pdb
-F:\web\Net\CmsNet\CmsAPI\obj\x86\Debug\ResolveAssemblyReference.cache
-F:\web\Net\CmsNet\CmsAPI\obj\x86\Debug\CmsAPI.Properties.Resources.resources
-F:\web\Net\CmsNet\CmsAPI\obj\x86\Debug\GenerateResource.read.1.tlog
-F:\web\Net\CmsNet\CmsAPI\obj\x86\Debug\GenerateResource.write.1.tlog
-F:\web\Net\CmsNet\CmsAPI\obj\x86\Debug\CmsAPI.pdb
-F:\web\Net\CmsNet\CmsAPI\bin\Debug\CmsAPI.dll.config
-F:\web\Net\CmsNet\CmsAPI\bin\Debug\CmsAPI.dll
-F:\web\Net\CmsNet\CmsAPI\obj\x86\Debug\CmsAPI.dll
