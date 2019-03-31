@@ -586,7 +586,7 @@ namespace Cms.Common
         public static string ChangePageNum(string url, int newPageNum)
         {
             string newUrl = "";
-            string canshu = "page";
+            //string canshu = "page";
             string beforZ = "?"; //前缀
             if (url.Contains("?"))
             {

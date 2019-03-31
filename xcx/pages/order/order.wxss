@@ -1,23 +1,26 @@
 /* pages/order/order.wxss */
 @import "../pub_top/pub_top.wxss";
 @import "../footer/footer.wxss";
-.search{
+
+.search {
   width: 94%;
   height: 80rpx;
   box-sizing: border-box;
   border: 1rpx solid #d7d7d7;
   border-radius: 10rpx;
   margin: 15rpx auto 0;
-  position: relative
+  position: relative;
 }
-.search image{
+
+.search image {
   width: 28rpx;
   height: 28rpx;
   position: absolute;
   top: 27rpx;
   left: 25rpx;
 }
-.search input{
+
+.search input {
   display: block;
   height: 50rpx;
   line-height: 50rpx;
@@ -25,24 +28,28 @@
   color: #333;
   padding: 14rpx 0 14rpx 95rpx;
 }
-.switch_box{
- width: 100%;
- height: 85rpx;
- line-height: 85rpx;
- font-size: 28rpx;
- color: #030303;
- text-align: center;
- display: flex
+
+.switch_box {
+  width: 100%;
+  height: 85rpx;
+  line-height: 85rpx;
+  font-size: 28rpx;
+  color: #030303;
+  text-align: center;
+  display: flex;
 }
-.switch_box navigator{
+
+.switch_box navigator {
   flex: 1;
   border-bottom: 2rpx solid #fff;
 }
-.switch_box navigator.active{
+
+.switch_box navigator.active {
   border-color: #dc4e49;
   color: #dc4e49;
 }
-.order_hao{
+
+.order_hao {
   padding: 0 3%;
   display: block;
   height: 85rpx;
@@ -50,16 +57,19 @@
   border-bottom: 1rpx solid #878787;
   font-size: 28rpx;
 }
-.order_hao text.left{
+
+.order_hao text.left {
   float: left;
   display: block;
-  color: #030303
+  color: #030303;
 }
-.order_hao text.right{
+
+.order_hao text.right {
   color: #999;
-  float: right
+  float: right;
 }
-.order{
+
+.order {
   width: 94%;
   padding: 24rpx 0;
   border-bottom: 1rpx solid #878787;
@@ -67,42 +77,50 @@
   position: relative;
   margin: 0 auto;
 }
-.order_img{
+
+.order_img {
   width: 130rpx;
   height: 130rpx;
   position: absolute;
   left: 0;
   top: 24rpx;
 }
-.order_xx{
+
+.order_xx {
   width: 100%;
   box-sizing: border-box;
   padding-left: 150rpx;
   height: 43rpx;
   line-height: 43rpx;
   font-size: 28rpx;
-  color: #999
+  color: #999;
 }
-.left{
+
+.left {
   float: left;
 }
-.right{
+
+.right {
   float: right;
 }
-.order_zt{
+
+.order_zt {
   padding: 0 3%;
   height: 86rpx;
-  position: relative
+  position: relative;
 }
-.order_zt_top{
+
+.order_zt_top {
   height: 43rpx;
   line-height: 43rpx;
   font-size: 24rpx;
 }
-.order_zt_top .f00{
+
+.order_zt_top .f00 {
   color: #f00;
 }
-.order_zt navigator{
+
+.order_zt navigator {
   width: 170rpx;
   height: 60rpx;
   box-sizing: border-box;
@@ -116,20 +134,3 @@
   right: 3%;
   top: 11rpx;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

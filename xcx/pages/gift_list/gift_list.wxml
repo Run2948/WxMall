@@ -1,33 +1,35 @@
 <!--积分换礼pages/gift_list/gift_list.wxml-->
 <view class='dqye'>我的积分：{{user.userscore}}</view>
 <scroll-view scroll-y="true" class="scoll-h" bindscrolltolower="bindDownLoad" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
-<view class='list_box'>
-<block wx:for="{{list}}" wx:key="{{item.id}}">
-  <view class='good'>
-    <view class='img'>
-      <image src='{{hostUrl}}{{item.litpic}}' mode='aspectFill'></image>
-      <text>已兑换：{{item.sales}}</text>  
-    </view>
-    <text class='title'>{{item.name}}</text>
-    <view class='jiege'>
-      <view class='dui'>
-        <view>规格：个</view>
-        <view>限兑：{{item.limitNumber}} 可兑：{{item.stock}}</view>
-        <text>积分：{{item.integral}}</text>
+  <view class='list_box'>
+    <block wx:for="{{list}}" wx:key="{{item.id}}">
+      <view class='good'>
+        <view class='img'>
+          <image src='{{hostUrl}}{{item.litpic}}' mode='aspectFill'></image>
+          <text>已兑换：{{item.sales}}</text>
+        </view>
+        <text class='title'>{{item.name}}</text>
+        <view class='jiege'>
+          <view class='dui'>
+            <view>规格：个</view>
+            <view>限兑：{{item.limitNumber}} 可兑：{{item.stock}}</view>
+            <text>积分：{{item.integral}}</text>
+          </view>
+          <view class='gwc' bindtap='addCart' data-id='{{item.id}}' data-unit='份'>
+            <image class='gwcsrc' src='../../images/good_gwc.png'></image>
+          </view>
+        </view>
       </view>
-      <view class='gwc' bindtap='addCart' data-id='{{item.id}}' data-unit='份'><image class='gwcsrc' src='../images/good_gwc.png'></image></view>
-    </view>
+    </block>
   </view>
-  </block>
-</view>
 </scroll-view>
- <view>
-    <loading hidden="{{hidden}}">
-      加载中...
-    </loading>
-  </view>
+<view>
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+</view>
 <!-- <view class='more'>上拉显示更多</view> -->
 <view class='jfd' bindtap='cartIntegral'>
-  <image src='../images/good_gwc.png'></image>
+  <image src='../../images/good_gwc.png'></image>
   积分单 {{cartList.length}}
 </view>

@@ -1,116 +1,124 @@
 <!--确认订单-->
 <form bindsubmit="formSubmit" bindreset="formReset">
-<view class='box'>
-  <view class='qhfs'>
-    <view class='list'>
-      <view class='biao'>配送方式:</view>
-      <view class='listr'>
-        <button class='fangshi {{shippingMethodActive==1? "on":""}}' bindtap='shippingMethod' data-id='1'>门店自提</button>
-        <button class='fangshi  {{shippingMethodActive==2? "on":""}}' bindtap='shippingMethod' data-id='2'>送货上门</button>
-        <input type='hidden' hidden='true' name="shipping_method" value='{{shipping_method}}'></input>
+  <view class='box'>
+    <view class='qhfs'>
+      <view class='list'>
+        <view class='biao'>配送方式:</view>
+        <view class='listr'>
+          <button class='fangshi {{shippingMethodActive==1? "on":""}}' bindtap='shippingMethod' data-id='1'>门店自提</button>
+          <button class='fangshi  {{shippingMethodActive==2? "on":""}}' bindtap='shippingMethod' data-id='2'>送货上门</button>
+          <input type='hidden' hidden='true' name="shipping_method" value='{{shipping_method}}'></input>
+        </view>
       </view>
-    </view>
-    <view class='list'>
-      <view class='biao'>联系方式:</view>
-      <view class='listr lxfs_b'>
-        <input class='lxfs' type='text' name="recommended_code" value='{{recommended_code}}'></input>
-        <image src='../images/syico3.png' class='rightico'></image>
+      <view class='list'>
+        <view class='biao'>联系方式:</view>
+        <view class='listr lxfs_b'>
+          <input class='lxfs' type='text' name="recommended_code" value='{{recommended_code}}'></input>
+          <image src='../../images/syico3.png' class='rightico'></image>
+        </view>
       </view>
-    </view>
-    <block wx:if="{{shippingMethodActive==2}}">
-    <!-- 门店自提的时候没有收货地址这个选项 -->
-    <view class='list'>
-      <view class='biao'>收货地址:</view>
-      <view class='listr lxfs_b'>
-        <input class='shdz' type='text' placeholder='请添加收货地址'   value='{{address}}'  bindtap='addAddress'></input>
-        
-      </view>
-    </view>
-    </block>
-     <input type='hidden' hidden='true' name="addressId" value='{{addressId}}'></input>
-    <!-- 门店自提的时候没有收货地址这个选项 -->
-    <!-- <view class='list'>
+      <block wx:if="{{shippingMethodActive==2}}">
+        <!-- 门店自提的时候没有收货地址这个选项 -->
+        <view class='list'>
+          <view class='biao'>收货地址:</view>
+          <view class='listr lxfs_b'>
+            <input class='shdz' type='text' placeholder='请添加收货地址' value='{{address}}' bindtap='addAddress'></input>
+
+          </view>
+        </view>
+      </block>
+      <input type='hidden' hidden='true' name="addressId" value='{{addressId}}'></input>
+      <!-- 门店自提的时候没有收货地址这个选项 -->
+      <!-- <view class='list'>
       <view class='biao'>取货时间:</view>
       <view class='listr lxfs_b'>
         <view class='time'>2018-02-28  16:00</view>
       </view>
     </view>-->
-  </view> 
-  <view class='list yysj'>
-    <view class='biao'>营业时间:</view>
-    <view class='listr lxfs_b'>
-      <view class='time'>07:30-22:30</view>
     </view>
-  </view>
-  <view class='spinfo'>
-  <block wx:for="{{cartList}}" wx:key="{{item.id}}">
-    <view class='splist'>
-      <image src='{{hostUrl}}{{item.litpic}}' mode='aspectFill' class='spimg'></image>
-      <view class='info'>
-        <view class='info_l'>
-          <view class='spname'>{{item.title}}<text></text></view>
-          <view class='guige'>规格:/{{item.property_value}}</view>
-        </view>
-        <view class='price'>
-          <view class='xian'><text class='fuhao'>￥</text>{{item.price}}<text></text></view>
-          <view class='yuanq'>￥{{item.marketPrice}}</view>
-          <view class='yuanq'> X {{item.quantity}}</view>
-           <!-- <view class='edit'>
+    <view class='list yysj'>
+      <view class='biao'>营业时间:</view>
+      <view class='listr lxfs_b'>
+        <view class='time'>07:30-22:30</view>
+      </view>
+    </view>
+    <view class='spinfo'>
+      <block wx:for="{{cartList}}" wx:key="{{item.id}}">
+        <view class='splist'>
+          <image src='{{hostUrl}}{{item.litpic}}' mode='aspectFill' class='spimg'></image>
+          <view class='info'>
+            <view class='info_l'>
+              <view class='spname'>{{item.title}}
+                <text></text>
+              </view>
+              <view class='guige'>规格:/{{item.property_value}}</view>
+            </view>
+            <view class='price'>
+              <view class='xian'>
+                <text class='fuhao'>￥</text>{{item.price}}
+                <text></text>
+              </view>
+              <view class='yuanq'>￥{{item.marketPrice}}</view>
+              <view class='yuanq'> X {{item.quantity}}</view>
+              <!-- <view class='edit'>
              <button class='jian'>-</button>
             <input value='1' class='num'></input>
             <button class='jia'>+</button> 
           </view>  -->
+            </view>
+          </view>
         </view>
+      </block>
+    </view>
+    <view class='list yysj'>
+      <view class='biao'>买家留言</view>
+      <view class='listr lxfs_b'>
+        <input placeholder='有什么话要对商家说的' type='text' name="note" value='{{note}}' class='shdz'></input>
+        <input type='hidden' hidden='true' name="quantity_sum" value='{{quantity}}'></input>
+        <input type='hidden' hidden='true' name="price_sum" value='{{dTotal}}'></input>
+        <input type='hidden' hidden='true' name="price_sum" value='{{dTotal}}'></input>
       </view>
     </view>
-    </block>
-  </view>
-  <view class='list yysj'>
-    <view class='biao'>买家留言</view>
-    <view class='listr lxfs_b'>
-      <input placeholder='有什么话要对商家说的' type='text' name="note" value='{{note}}' class='shdz'></input>
-       <input type='hidden' hidden='true' name="quantity_sum" value='{{quantity}}'></input>
-       <input type='hidden' hidden='true' name="price_sum" value='{{dTotal}}' ></input>
-       <input type='hidden' hidden='true' name="price_sum" value='{{dTotal}}' ></input>
+    <view class='zffs'>
+      <view class='tits'>支付方式</view>
+      <view class='pay'>
+        <image src='../../images/wechat.png'></image>
+        <text>微信支付</text>
+        <radio color='#ed4630' checked='true' name="pay_method" value='{{pay_method}}'></radio>
+      </view>
+    </view>
+    <view class='det'>
+      <view class='all'>
+        <view class='zuo'>合计金额</view>
+        <view class='xian'>
+          <text class='fuhao'>￥</text>{{dTotal}}
+          <text></text>
+        </view>
+      </view>
+      <view class='fen'>
+        <view class='zuo'>合计数量</view>
+        <view>{{quantity}}</view>
+      </view>
+      <view class='fen'>
+        <view class='zuo'>活动</view>
+        <view>-0</view>
+      </view>
+      <view class='fen'>
+        <view class='zuo'>运费</view>
+        <view>+0</view>
+      </view>
+      <view class='fen'>
+        <view class='zuo'>优惠</view>
+        <view>-0</view>
+      </view>
     </view>
   </view>
-  <view class='zffs'>
-    <view class='tits'>支付方式</view>
-    <view class='pay'>
-      <image src='../images/wechat.png'></image>
-      <text>微信支付</text>
-      <radio color='#ed4630' checked='true' name="pay_method" value='{{pay_method}}'></radio>
+  <view class='fix_bot'>
+    <view class='jine'>实付款：
+      <text class='fuhao'>￥</text>
+      <text class='qian'>{{dTotal}}</text>
+      <text></text>
     </view>
+    <button class='tjdd' form-type="submit">提交订单</button>
   </view>
-  <view class='det'>
-    <view class='all'>
-      <view class='zuo'>合计金额</view>
-      <view class='xian'><text class='fuhao'>￥</text>{{dTotal}}<text></text></view>
-    </view>
-    <view class='fen'>
-      <view class='zuo'>合计数量</view>
-      <view>{{quantity}}</view>
-    </view>
-    <view class='fen'>
-      <view class='zuo'>活动</view>
-      <view>-0</view>
-    </view>
-    <view class='fen'>
-      <view class='zuo'>运费</view>
-      <view>+0</view>
-    </view>
-    <view class='fen'>
-      <view class='zuo'>优惠</view>
-      <view>-0</view>
-    </view>
-  </view>
-</view>
-<view class='fix_bot'>
-  <view class='jine'>实付款：
-    <text class='fuhao'>￥</text>
-    <text class='qian'>{{dTotal}}</text>
-    <text></text>
-  </view>
-  <button class='tjdd' form-type="submit">提交订单</button>
-</view>
 </form>

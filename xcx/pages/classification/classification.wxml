@@ -2,24 +2,26 @@
 <view class='box'>
   <view class='top'>
     <view class='location'>
-      <image src='../images/syico1.png' class='dwico'></image>
+      <image src='../../images/syico1.png' class='dwico'></image>
       <text>泰禹家园店</text>
-      <image src='../images/syico2.png' class='rightico'></image>
+      <image src='../../images/syico2.png' class='rightico'></image>
     </view>
     <view class='search'>
-      <image src='../images/ssico.png'></image>
-       <input type='text' placeholder='搜索商品名称' value="{{word}}"   bindinput="searchActiveChangeinput" bindblur='searchSubmit'></input>
+      <image src='../../images/ssico.png'></image>
+      <input type='text' placeholder='搜索商品名称' value="{{word}}" bindinput="searchActiveChangeinput" bindblur='searchSubmit'></input>
     </view>
   </view>
   <view class='list'>
-   <block wx:for="{{typeList}}" wx:key="{{item.id}}">
-    <view class='li'>
-    <navigator url='/pages/goods_list/goods_list?typeId={{item.id}}'>
-      <view class='li_img'><image src='{{hostUrl}}{{item.img_url}}' class='pic'></image></view>
-      {{item.title}}
-      </navigator>
-    </view>
+    <block wx:for="{{typeList}}" wx:key="{{item.id}}">
+      <view class='li'>
+        <navigator url='/pages/goods_list/goods_list?typeId={{item.id}}'>
+          <view class='li_img'>
+            <image src='{{hostUrl}}{{item.img_url}}' class='pic'></image>
+          </view>
+          {{item.title}}
+        </navigator>
+      </view>
     </block>
   </view>
-  <include src="../footer/footer.wxml"/>
+  <include src="../../footer/footer.wxml" />
 </view>

@@ -1,6 +1,6 @@
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: function() {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -22,8 +22,8 @@ App({
               }
             }
           })
-        }else{
-          
+        } else {
+
         }
       }
     });
@@ -31,9 +31,9 @@ App({
     if (userId == null || userId <= 0) {
       this.getUserLogin();
     }
-   
+
   },
-  getUserLogin: function (callback) {
+  getUserLogin: function(callback) {
     var that = this;
     // 登录
     wx.login({
@@ -41,7 +41,7 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         if (res.code) {
           wx.getUserInfo({
-            withCredentials:false,
+            withCredentials: false,
             success: resUserInfo => {
               if (resUserInfo) {
                 that.globalData.userInfo = resUserInfo.userInfo
@@ -55,7 +55,7 @@ App({
                   header: {
                     'content-type': 'application/json'
                   },
-                  success: function (res) {
+                  success: function(res) {
                     wx.request({
                       url: that.globalData.apiUrl,
                       data: {
@@ -68,7 +68,7 @@ App({
                       header: {
                         'content-type': 'application/json'
                       },
-                      success: function (resAddUser) {
+                      success: function(resAddUser) {
                         if (resAddUser.data) {
                           console.log(JSON.stringify(resAddUser.data));
                           that.globalData.userId = resAddUser.data.userId;
@@ -83,7 +83,7 @@ App({
                           callback(resAddUser.data.userId)
                         }
                       }
-                    });//创建会员
+                    }); //创建会员
                   }
                 })
               }
@@ -101,8 +101,8 @@ App({
     userId: 0,
     userInfo: null,
     word: '',
-    typeId:'',
-    apiUrl: 'https://lxshenghuo.sulel.com/api/xcx/index.aspx',
-    hostUrl: 'https://lxshenghuo.sulel.com',
+    typeId: '',
+    apiUrl: 'http://localhost:36227/api/xcx/index.aspx', //'https://lxshenghuo.sulel.com/api/xcx/index.aspx',
+    hostUrl: 'http://localhost:36227', //'https://lxshenghuo.sulel.com',
   }
 })

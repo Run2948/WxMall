@@ -67,8 +67,8 @@
 </view>
 <view class='bottom'>
   <block wx:if="{{order.is_payment==0}}">
-   <block wx:if="{{order.order_status==0}}">
-    <button bindtap='pay' data-id='{{order.id}}'>立即支付</button>
+    <block wx:if="{{order.order_status==0}}">
+      <button bindtap='pay' data-id='{{order.id}}'>立即支付</button>
     </block>
     <block wx:if="{{order.order_status==0}}">
       <button bindtap='canalOrder' data-id='{{order.id}}'>取消订单</button>

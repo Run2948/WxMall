@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery树形导航菜单插件制作滑动多级二级下拉菜单展示</title>
+<meta name="description" content="jquery树形导航菜单插件制作一个类似树形展示的slider滑动多级二级下拉菜单目录，支持无限嵌套。jquery插件,jquery下载。" />
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>	
+<script type="text/javascript" src="js/jquery.tree.js"></script>	
+<script type="text/javascript">
+$(function(){
+	$('#files').tree({
+		expanded: 'li:first'
+	});
+});
+</script>		
+</head>
+<body>	
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;font-size:12px;}
+a,img{border:0;}
+#files{margin:100px auto;width:400px;}
+.tree,.tree ul,.tree li{list-style:none;margin:0;padding:0;zoom: 1;}
+.tree ul{margin-left:8px;}
+.tree li a{color:#555;padding:.1em 7px .1em 27px;display:block;text-decoration:none;border:1px dashed #fff;background:url(images/icon-file.gif) 5px 50% no-repeat;}
+.tree li a.tree-parent{background:url(images/icon-folder-open.gif) 5px 50% no-repeat;}
+.tree li a.tree-parent-collapsed{background:url(images/icon-folder.gif) 5px 50% no-repeat;}
+.tree li a:hover,.tree li a.tree-parent:hover,.tree li a:focus,.tree li a.tree-parent:focus,.tree li a.tree-item-active{color:#000;border:1px solid#eee;background-color:#fafafa;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;}
+.tree li a:focus,.tree li a.tree-parent:focus,.tree li a.tree-item-active{border:1px solid #e2f3fb;background-color:#f2fafd;}
+.tree ul.tree-group-collapsed{display:none;}
+</style>
+
+
+<ul id="files">
+	<li><a href="javascript:void(0);">jquery 特效</a>
+		<ul>
+			<li><a href="javascript:void(0);">jquery图片特效</a>
+				<ul>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery图片切换">jquery图片切换</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery幻灯片">jquery幻灯片</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery图片滚动">jquery图片滚动</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery图片放大镜">jquery图片放大镜</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery广告">jquery广告</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:void(0);">jquery导航菜单</a>
+				<ul>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery动画菜单">jquery动画菜单</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery树形菜单">jquery树形菜单</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery下拉菜单">jquery下拉菜单</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery右键菜单">jquery右键菜单</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:void(0);">jquery选项卡特效</a>
+				<ul>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery选项卡切换">jquery选项卡切换</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery滑动选项卡">jquery滑动选项卡</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:void(0);">jquery文字特效</a>
+				<ul>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery文字滚动">jquery文字滚动</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery文字闪烁">jquery文字闪烁</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery文字切换">jquery文字切换</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery文字数量">jquery文字数量</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery文字改变">jquery文字改变</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:void(0);">jquery表单特效</a>
+				<ul>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery表单验证">jquery表单验证</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery表单美化">jquery表单美化</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery搜索提示">jquery搜索提示</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery搜索提示">jquery搜索提示</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery全选反选">jquery全选反选</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:void(0);">jquery表格特效</a>
+				<ul>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery图表插件">jquery图表插件</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery表格排序">jquery表格排序</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery表格排序">jquery表格排序</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="jquery表格变色">jquery表格变色</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><a href="javascript:void(0);">js特效</a>
+		<ul>
+			<li><a href="javascript:void(0);">js图片特效</a>
+				<ul>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js图片切换">js图片切换</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js幻灯片">js幻灯片</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js图片滚动">js图片滚动</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js图片放大镜">js图片放大镜</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js广告">js广告</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:void(0);">js导航菜单</a>
+				<ul>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js动画菜单">js动画菜单</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js树形菜单">js树形菜单</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js下拉菜单">js下拉菜单</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js右键菜单">js右键菜单</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:void(0);">js选项卡特效</a>
+				<ul>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js选项卡切换">js选项卡切换</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js滑动选项卡">js滑动选项卡</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:void(0);">js文字特效</a>
+				<ul>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js文字滚动">js文字滚动</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js文字闪烁">js文字闪烁</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js文字切换">js文字切换</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js文字数量">js文字数量</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js文字改变">js文字改变</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:void(0);">js表单特效</a>
+				<ul>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js表单验证">js表单验证</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js表单美化">js表单美化</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js搜索提示">js搜索提示</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js搜索提示">js搜索提示</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js全选反选">js全选反选</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:void(0);">js表格特效</a>
+				<ul>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js图表插件">js图表插件</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js表格排序">js表格排序</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js表格排序">js表格排序</a></li>
+					<li><a href="http://www.17sucai.com/" target="_blank" title="js表格变色">js表格变色</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	
+	<li><a href="javascript:void(0);">flash特效</a>
+		<ul>
+			<li><a href="http://www.17sucai.com/" target="_blank" title="flash图片特效">flash图片特效</a></li>
+			<li><a href="http://www.17sucai.com/" target="_blank" title="flash导航菜单">flash导航菜单</a></li>
+		</ul>
+	</li>
+	<li><a href="javascript:void(0);">div+css教程</a>
+		<ul>
+			<li><a href="http://www.17sucai.com/" target="_blank" title="div+css布局">div+css布局</a></li>
+			<li><a href="http://www.17sucai.com/" target="_blank" title="div+css菜单">div+css菜单</a></li>
+			<li><a href="http://www.17sucai.com/" target="_blank" title="css3教程">css3教程</a></li>
+		</ul>
+	</li>
+	<li><a href="javascript:void(0);">html5教程</a>
+		<ul>
+			<li><a href="http://www.17sucai.com/" target="_blank" title="html5特效">html5特效</a></li>
+			<li><a href="http://www.17sucai.com/" target="_blank" title="html5图表">html5图表</a></li>
+		</ul>
+	</li>
+</ul>
+
+</body>
+</html>

@@ -4,9 +4,9 @@ const app = getApp()
 Page({
   data: {
     imgUrls: [
-     
+
     ],
-    imgBanner:[],
+    imgBanner: [],
     hostUrl: app.globalData.hostUrl,
     word: app.globalData.word,
     indicatorDots: true,
@@ -14,12 +14,12 @@ Page({
     interval: 3000,
     duration: 500,
   },
-  onShow: function () {
+  onShow: function() {
     // 生命周期函数--监听页面显示
     var that = this;
     //  高度自适应
     wx.getSystemInfo({
-      success: function (res) {
+      success: function(res) {
         var clientHeight = res.windowHeight,
           clientWidth = res.windowWidth,
           rpxR = 750 / clientWidth;
@@ -32,16 +32,16 @@ Page({
         });
       }
     });
-    that.getBanner(1);//读取首页banner
-    that.getBannerType(2);//读取广告
-    that.getArticlePage();//读取公告
-    that.getProductIsRecommend();//读取店长推荐
-    that.getProductOne();//读取产品
-    that.getProductTwo();//读取产品
-    that.getProductThree();//读取产品
-    that.getProductFour();//读取产品
+    that.getBanner(1); //读取首页banner
+    that.getBannerType(2); //读取广告
+    that.getArticlePage(); //读取公告
+    that.getProductIsRecommend(); //读取店长推荐
+    that.getProductOne(); //读取产品
+    that.getProductTwo(); //读取产品
+    that.getProductThree(); //读取产品
+    that.getProductFour(); //读取产品
   },
-  getBanner: function (typeId) {//读取首页banner
+  getBanner: function(typeId) { //读取首页banner
     var that = this;
     wx.request({
       url: app.globalData.apiUrl,
@@ -52,13 +52,13 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
-          if(typeId=1){
-          that.setData({
-            imgUrls: res.data,
-          })
-          }else if(typeId=2){
+          if (typeId = 1) {
+            that.setData({
+              imgUrls: res.data,
+            })
+          } else if (typeId = 2) {
             that.setData({
               imgBanner: res.data,
             })
@@ -67,7 +67,7 @@ Page({
       }
     })
   },
-  getBannerType: function (typeId) {//读取广告
+  getBannerType: function(typeId) { //读取广告
     var that = this;
     wx.request({
       url: app.globalData.apiUrl,
@@ -78,29 +78,29 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
-            that.setData({
-              imgBanner: res.data,
-            })
+          that.setData({
+            imgBanner: res.data,
+          })
         }
       }
     })
   },
-  getArticlePage: function (typeId) {//读取公告
+  getArticlePage: function(typeId) { //读取公告
     var that = this;
     wx.request({
       url: app.globalData.apiUrl,
       data: {
         opt: 'getArticlePage',
         classId: 93,
-        page:1,
-        size:46,
+        page: 1,
+        size: 46,
       },
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           that.setData({
             newList: res.data,
@@ -109,7 +109,7 @@ Page({
       }
     })
   },
-  getProductIsRecommend: function () {//读取产品推荐
+  getProductIsRecommend: function() { //读取产品推荐
     var that = this;
     wx.request({
       url: app.globalData.apiUrl,
@@ -122,7 +122,7 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           that.setData({
             productIsRecommend: res.data,
@@ -131,7 +131,7 @@ Page({
       }
     })
   },
-  getProductOne: function () {//读取产品
+  getProductOne: function() { //读取产品
     var that = this;
     wx.request({
       url: app.globalData.apiUrl,
@@ -144,7 +144,7 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           that.setData({
             productOne: res.data,
@@ -153,7 +153,7 @@ Page({
       }
     })
   },
-  getProductTwo: function () {//读取产品
+  getProductTwo: function() { //读取产品
     var that = this;
     wx.request({
       url: app.globalData.apiUrl,
@@ -166,7 +166,7 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           that.setData({
             productTwo: res.data,
@@ -175,7 +175,7 @@ Page({
       }
     })
   },
-  getProductThree: function () {//读取产品
+  getProductThree: function() { //读取产品
     var that = this;
     wx.request({
       url: app.globalData.apiUrl,
@@ -188,7 +188,7 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           that.setData({
             productThree: res.data,
@@ -197,7 +197,7 @@ Page({
       }
     })
   },
-  getProductFour: function () {//读取产品
+  getProductFour: function() { //读取产品
     var that = this;
     wx.request({
       url: app.globalData.apiUrl,
@@ -210,7 +210,7 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           that.setData({
             productFour: res.data,
@@ -220,46 +220,46 @@ Page({
     })
   },
   //输入内容时
-  searchActiveChangeinput: function (e) {
+  searchActiveChangeinput: function(e) {
     const val = e.detail.value;
     app.globalData.word = val;
   },
   //搜索提交
-  searchSubmit: function () {
+  searchSubmit: function() {
     wx.navigateTo({
       url: '/pages/goods_list/goods_list'
     })
   },
-  changeIndicatorDots: function (e) {
+  changeIndicatorDots: function(e) {
     this.setData({
       indicatorDots: !this.data.indicatorDots
     })
   },
-  changeAutoplay: function (e) {
+  changeAutoplay: function(e) {
     this.setData({
       autoplay: !this.data.autoplay
     })
   },
-  intervalChange: function (e) {
+  intervalChange: function(e) {
     this.setData({
       interval: e.detail.value
     })
   },
-  durationChange: function (e) {
+  durationChange: function(e) {
     this.setData({
       duration: e.detail.value
     })
   },
-  onLoad: function () {
+  onLoad: function() {
     // 查看是否授权
     wx.getSetting({
-      success: function (res) {
+      success: function(res) {
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称
           wx.getUserInfo({
-            success: function (res) {
+            success: function(res) {
               // console.log(res.userInfo)
-              
+
             }
           })
         }
@@ -267,9 +267,9 @@ Page({
     })
   },
   /**
-    * 用户点击右上角分享
-    */
-  onShareAppMessage: function () {
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function() {
     if (res.from === 'button') {
       // 来自页面内转发按钮
       console.log(res.target)
@@ -277,14 +277,14 @@ Page({
     return {
       title: '链鲜社区生活馆',
       path: '/pages/index/index',
-      success: function (res) {
+      success: function(res) {
         // 转发成功
       },
-      fail: function (res) {
+      fail: function(res) {
         // 转发失败
       }
     }
   },
-  
-  
+
+
 })

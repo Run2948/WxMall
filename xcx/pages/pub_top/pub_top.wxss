@@ -1,5 +1,6 @@
 /* pages/pub_top/pub_top.wxss */
-.pub_top{
+
+.pub_top {
   height: 90rpx;
   line-height: 90rpx;
   border-bottom: 1rpx solid #cfcfd0;
@@ -7,9 +8,10 @@
   color: #030303;
   font-size: 32rpx;
   position: relative;
-  background: #fff
+  background: #fff;
 }
-.pub_top button{
+
+.pub_top button {
   width: 40rpx;
   height: 90rpx;
   position: absolute;
@@ -17,28 +19,20 @@
   top: 0;
   background: none;
   border: none;
-  z-index: 9
+  z-index: 9;
 }
-.pub_top image{
+
+.pub_top image {
   width: 20rpx;
   height: 35rpx;
   display: block;
   position: absolute;
   left: 3%;
   top: 32rpx;
-  z-index: 3
+  z-index: 3;
 }
-.pub_top button:after{
+
+.pub_top button:after {
   background: none;
-  border: none
+  border: none;
 }
-
-
-
-
-
-
-
-
-
-

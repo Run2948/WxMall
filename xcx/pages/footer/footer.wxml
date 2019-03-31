@@ -1,19 +1,27 @@
 <!--pages/footer/footer.wxml-->
 <view class='footer'>
   <navigator url="/pages/index/index" open-type='redirect' class="foo_nav" hover-class="nav_ah">
-    <view class='img_box'><image class='foo_nav_img' src='../images/footer_img1.png'></image></view>
+    <view class='img_box'>
+      <image class='foo_nav_img' src='../../images/footer_img1.png'></image>
+    </view>
     <text>首页</text>
   </navigator>
   <navigator url="/pages/classification/classification" open-type='redirect' class="foo_nav" hover-class="nav_ah">
-    <view class='img_box'><image class='foo_nav_img' src='../images/footer_img2.png'></image></view>
+    <view class='img_box'>
+      <image class='foo_nav_img' src='../../images/footer_img2.png'></image>
+    </view>
     <text>分类</text>
   </navigator>
   <navigator url="/pages/cart/cart" open-type='redirect' class="foo_nav" hover-class="nav_ah">
-    <view class='img_box'><image class='foo_nav_img' src='../images/footer_img3.png'></image></view>
+    <view class='img_box'>
+      <image class='foo_nav_img' src='../../images/footer_img3.png'></image>
+    </view>
     <text>购物车</text>
   </navigator>
   <navigator url="/pages/user/user" open-type='redirect' class="foo_nav" hover-class="nav_ah">
-    <view class='img_box'><image class='foo_nav_img' src='../images/footer_img4.png'></image></view>
+    <view class='img_box'>
+      <image class='foo_nav_img' src='../../images/footer_img4.png'></image>
+    </view>
     <text>我的</text>
   </navigator>
 </view>

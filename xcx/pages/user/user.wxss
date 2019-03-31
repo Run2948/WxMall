@@ -1,21 +1,24 @@
 /* pages/user/user.wxss */
 @import "../pub_top/pub_top.wxss";
 @import "../footer/footer.wxss";
-.user_top{
+
+.user_top {
   width: 100%;
   padding: 43rpx 0;
   height: 168rpx;
   position: relative;
 }
-.top_img{
+
+.top_img {
   width: 100%;
   height: 254rpx;
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 1
+  z-index: 1;
 }
-.tx{
+
+.tx {
   width: 158rpx;
   height: 158rpx;
   position: absolute;
@@ -26,11 +29,13 @@
   overflow: hidden;
   border: 5rpx solid #fff;
 }
-.tx image{
+
+.tx image {
   width: 100%;
   height: 100%;
 }
-.nicheng{
+
+.nicheng {
   padding-left: 250rpx;
   padding-top: 43rpx;
   position: absolute;
@@ -39,9 +44,10 @@
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  z-index: 3
+  z-index: 3;
 }
-.title{
+
+.title {
   display: block;
   font-size: 24rpx;
   line-height: 150%;
@@ -49,7 +55,8 @@
   left: 250rpx;
   top: 60rpx;
 }
-.text{
+
+.text {
   display: block;
   position: absolute;
   color: #fff;
@@ -58,7 +65,8 @@
   bottom: 60rpx;
   line-height: 150%;
 }
-.jifen{
+
+.jifen {
   color: #fff;
   position: absolute;
   font-size: 24rpx;
@@ -66,31 +74,36 @@
   bottom: 60rpx;
   line-height: 150%;
 }
-.muen{
+
+.muen {
   width: 100%;
   height: 100rpx;
   display: flex;
   background: #ed0c61;
 }
-.muen navigator{
+
+.muen navigator {
   flex: 1;
   text-align: center;
   color: #fff;
   font-size: 30rpx;
   line-height: 100rpx;
 }
-.muen navigator:nth-child(2){
+
+.muen navigator:nth-child(2) {
   border-left: 5rpx solid #fff;
   border-right: 5rpx solid #fff;
 }
-.muen_box{
+
+.muen_box {
   width: 100%;
   height: 95rpx;
   padding: 40rpx 0 25rpx;
   border-bottom: 2rpx solid #f2f2f2;
   display: flex;
 }
-.nav_muen{
+
+.nav_muen {
   flex: 1;
   line-height: 45rpx;
   color: #333;
@@ -98,13 +111,15 @@
   text-align: center;
   position: relative;
 }
-.nav_muen image{
+
+.nav_muen image {
   display: block;
   width: 50rpx;
   height: 50rpx;
   margin: 0 auto;
 }
-.nav_muen .icon{
+
+.nav_muen .icon {
   display: block;
   width: 30rpx;
   height: 30rpx;
@@ -119,7 +134,8 @@
   left: 50%;
   margin-left: 10rpx;
 }
-.li{
+
+.li {
   overflow: hidden;
   height: 54rpx;
   line-height: 54rpx;
@@ -128,31 +144,36 @@
   font-size: 24rpx;
   color: #4d5466;
 }
-.li image{
+
+.li image {
   width: 54rpx;
   height: 54rpx;
   display: block;
   float: left;
   margin: 0 19rpx;
 }
-.list{
+
+.list {
   overflow: hidden;
   padding-bottom: 30rpx;
-  margin-bottom:100rpx;
+  margin-bottom: 100rpx;
 }
-.xysd{
+
+.xysd {
   width: 100%;
   text-align: center;
   padding: 25rpx 0 120rpx;
   background: #ededed;
 }
-.xysd image{
+
+.xysd image {
   display: block;
   width: 131rpx;
   height: 33rpx;
   margin: 0 auto;
 }
-.xysd text{
+
+.xysd text {
   display: block;
   text-align: center;
   font-size: 24rpx;

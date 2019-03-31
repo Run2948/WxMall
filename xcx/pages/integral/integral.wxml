@@ -1,23 +1,26 @@
 <!--积分pages/integral/integral.wxml-->
-<view class='dqye'>剩余积分：<text>{{user.userscore}}</text><view class='huanbtn' bindtap='openGift'>积分换礼</view></view>
-<scroll-view scroll-y="true" class="scoll-h" bindscrolltolower="bindDownLoad" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
-<view class='jxmx'>
-  <view class='tit'>
-    <view class='time'>时间</view>
-    <view class='num'>余额</view>
-    <view class='describe'>描述</view>
-  </view>
-  <block wx:for="{{list}}" wx:key="{{item.id}}">
-  <view class='li'>
-    <view class='time'>{{item.createdTime}}</view>
-    <view class='num'>{{item.integral}}</view>
-    <view class='describe'>{{item.note}}</view>
-  </view>
-  </block>
+<view class='dqye'>剩余积分：
+  <text>{{user.userscore}}</text>
+  <view class='huanbtn' bindtap='openGift'>积分换礼</view>
 </view>
-</scroll-view>
- <view>
-    <loading hidden="{{hidden}}">
-      加载中...
-    </loading>
+<scroll-view scroll-y="true" class="scoll-h" bindscrolltolower="bindDownLoad" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+  <view class='jxmx'>
+    <view class='tit'>
+      <view class='time'>时间</view>
+      <view class='num'>余额</view>
+      <view class='describe'>描述</view>
+    </view>
+    <block wx:for="{{list}}" wx:key="{{item.id}}">
+      <view class='li'>
+        <view class='time'>{{item.createdTime}}</view>
+        <view class='num'>{{item.integral}}</view>
+        <view class='describe'>{{item.note}}</view>
+      </view>
+    </block>
   </view>
+</scroll-view>
+<view>
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+</view>

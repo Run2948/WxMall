@@ -1,5 +1,6 @@
 /* pages/footer/footer.wxss */
-.footer{
+
+.footer {
   width: 100%;
   display: flex;
   background: #fff;
@@ -10,32 +11,38 @@
   left: 0;
   border-top: 2rpx solid #b4b4b4;
 }
-.foo_nav{
+
+.foo_nav {
   flex: 1;
   text-align: center;
 }
-.img_box{
+
+.img_box {
   width: 50rpx;
   height: 50rpx;
   overflow: hidden;
   margin: 0 auto;
 }
-.foo_nav_img{
+
+.foo_nav_img {
   width: 50rpx;
   height: 100rpx;
   display: block;
   margin: 0rpx auto;
 }
-.foo_nav text{
+
+.foo_nav text {
   color: #909090;
   font-size: 25rpx;
   line-height: 40rpx;
   height: 40rpx;
   display: block;
 }
-.nav_ah image{
+
+.nav_ah image {
   margin-top: -49rpx;
 }
-.nav_ah text{
+
+.nav_ah text {
   color: #f00;
 }

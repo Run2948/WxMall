@@ -2,151 +2,202 @@
 <view class='box'>
   <view class='top'>
     <view class='location'>
-      <image src='../images/syico1.png' class='dwico'></image>
+      <image src='../../images/syico1.png' class='dwico'></image>
       <text>泰禹家园店</text>
-      <image src='../images/syico2.png' class='rightico'></image>
+      <image src='../../images/syico2.png' class='rightico'></image>
     </view>
     <view class='search'>
-      <image src='../images/ssico.png'></image>
-      <input type='text' placeholder='搜索商品名称' value="{{word}}"   bindinput="searchActiveChangeinput" bindblur='searchSubmit'></input>
+      <image src='../../images/ssico.png'></image>
+      <input type='text' placeholder='搜索商品名称' value="{{word}}" bindinput="searchActiveChangeinput" bindblur='searchSubmit'></input>
     </view>
   </view>
-  <swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='banner'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='banner'>
     <block wx:for="{{imgUrls}}" wx:key="{{item.id}}">
       <swiper-item>
-         <navigator url="{{item.linkUrl}}"><image src="{{hostUrl}}{{item.picUrl}}" class="slide-image" mode='widthFix'/></navigator>
+        <navigator url="{{item.linkUrl}}">
+          <image src="{{hostUrl}}{{item.picUrl}}" class="slide-image" mode='widthFix' />
+        </navigator>
       </swiper-item>
     </block>
   </swiper>
   <view class='gong'>
-   <text>公告：</text>
-     <swiper class="swiper_container" vertical="true"  autoplay="true" circular="true" interval="2000">
-     
-    <block wx:for="{{newList}}" wx:key="{{item.articleId}}">
-      <swiper-item>
-      
-    <view class="swiper_item gong_text"><navigator url='/pages/noticeDe/noticeDe?id={{item.articleId}}'> {{item.title}}</navigator></view>
-     </swiper-item>
-    </block>
+    <text>公告：</text>
+    <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="2000">
+
+      <block wx:for="{{newList}}" wx:key="{{item.articleId}}">
+        <swiper-item>
+
+          <view class="swiper_item gong_text">
+            <navigator url='/pages/noticeDe/noticeDe?id={{item.articleId}}'> {{item.title}}</navigator>
+          </view>
+        </swiper-item>
+      </block>
     </swiper>
-    <navigator url="/pages/notice/notice" class='more'>更多<image src='../images/syico3.png'></image></navigator>
+    <navigator url="/pages/notice/notice" class='more'>更多
+      <image src='../../images/syico3.png'></image>
+    </navigator>
   </view>
-    <block wx:for="{{imgBanner}}" wx:key="{{item.id}}">
-  <view class='haohuo'>
-    <view class='title'>{{item.name}}</view>
-    <navigator class='haoimg' url="{{item.linkUrl}}"><image src='{{hostUrl}}{{item.picUrl}}' mode='widthFix'></image></navigator>
-  </view>
- </block>
+  <block wx:for="{{imgBanner}}" wx:key="{{item.id}}">
+    <view class='haohuo'>
+      <view class='title'>{{item.name}}</view>
+      <navigator class='haoimg' url="{{item.linkUrl}}">
+        <image src='{{hostUrl}}{{item.picUrl}}' mode='widthFix'></image>
+      </navigator>
+    </view>
+  </block>
   <view class='cptit'>店长推荐
-    <navigator class='more' url="/pages/goods_list/goods_list">更多<image src='../images/syico3.png'></image></navigator>
+    <navigator class='more' url="/pages/goods_list/goods_list">更多
+      <image src='../../images/syico3.png'></image>
+    </navigator>
   </view>
   <view class='gwcon'>
-  <block wx:for="{{productIsRecommend}}" wx:key="{{item.id}}">
-  <navigator url="/pages/details/details?id={{item.id}}">
-    <view class='gwlist'>
-      <view class='gwpic'>
-        <image src='{{hostUrl}}{{item.litpic}}' mode='aspectFill'></image>
-        <view class='yishou'>已售:{{item.sales}}</view>
-      </view>
-      <view class='gwinfo'>
-        <view class='name'>{{item.name}}<text>规格:/{{item.unit}}</text></view>
-        <view class='price'><text class='fuhao'>￥</text>{{item.price}}<text class='jiao'></text></view>
-        <view class='yuan'>￥{{item.marketPrice}}</view>
-        <view class='gwc'><image src='../images/gwico.png'></image></view>
-      </view>
-    </view>
-    </navigator>
-   </block>
+    <block wx:for="{{productIsRecommend}}" wx:key="{{item.id}}">
+      <navigator url="/pages/details/details?id={{item.id}}">
+        <view class='gwlist'>
+          <view class='gwpic'>
+            <image src='{{hostUrl}}{{item.litpic}}' mode='aspectFill'></image>
+            <view class='yishou'>已售:{{item.sales}}</view>
+          </view>
+          <view class='gwinfo'>
+            <view class='name'>{{item.name}}
+              <text>规格:/{{item.unit}}</text>
+            </view>
+            <view class='price'>
+              <text class='fuhao'>￥</text>{{item.price}}
+              <text class='jiao'></text>
+            </view>
+            <view class='yuan'>￥{{item.marketPrice}}</view>
+            <view class='gwc'>
+              <image src='../../images/gwico.png'></image>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </block>
   </view>
   <view class='cptit'>百草猪肉
-    <navigator class='more' url="/pages/goods_list/goods_list">更多<image src='../images/syico3.png'></image></navigator>
+    <navigator class='more' url="/pages/goods_list/goods_list">更多
+      <image src='../../images/syico3.png'></image>
+    </navigator>
   </view>
   <view class='gwcon'>
     <block wx:for="{{productOne}}" wx:key="{{item.id}}">
-  <navigator url="/pages/details/details?id={{item.id}}">
-    <view class='gwlist'>
-      <view class='gwpic'>
-        <image src='{{hostUrl}}{{item.litpic}}' mode='aspectFill'></image>
-        <view class='yishou'>已售:{{item.sales}}</view>
-      </view>
-      <view class='gwinfo'>
-        <view class='name'>{{item.name}}<text>规格:/{{item.unit}}</text></view>
-        <view class='price'><text class='fuhao'>￥</text>{{item.price}}<text class='jiao'></text></view>
-        <view class='yuan'>￥{{item.marketPrice}}</view>
-        <view class='gwc'><image src='../images/gwico.png'></image></view>
-      </view>
-    </view>
-    </navigator>
-   </block>
+      <navigator url="/pages/details/details?id={{item.id}}">
+        <view class='gwlist'>
+          <view class='gwpic'>
+            <image src='{{hostUrl}}{{item.litpic}}' mode='aspectFill'></image>
+            <view class='yishou'>已售:{{item.sales}}</view>
+          </view>
+          <view class='gwinfo'>
+            <view class='name'>{{item.name}}
+              <text>规格:/{{item.unit}}</text>
+            </view>
+            <view class='price'>
+              <text class='fuhao'>￥</text>{{item.price}}
+              <text class='jiao'></text>
+            </view>
+            <view class='yuan'>￥{{item.marketPrice}}</view>
+            <view class='gwc'>
+              <image src='../../images/gwico.png'></image>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </block>
   </view>
   <view class='cptit'>生态土鸡
-    <navigator class='more' url="/pages/goods_list/goods_list">更多<image src='../images/syico3.png'></image></navigator>
+    <navigator class='more' url="/pages/goods_list/goods_list">更多
+      <image src='../../images/syico3.png'></image>
+    </navigator>
   </view>
   <view class='gwcon'>
     <block wx:for="{{productTwo}}" wx:key="{{item.id}}">
-  <navigator url="/pages/details/details?id={{item.id}}">
-    <view class='gwlist'>
-      <view class='gwpic'>
-        <image src='{{hostUrl}}{{item.litpic}}' mode='aspectFill'></image>
-        <view class='yishou'>已售:{{item.sales}}</view>
-      </view>
-      <view class='gwinfo'>
-        <view class='name'>{{item.name}}<text>规格:/{{item.unit}}</text></view>
-        <view class='price'><text class='fuhao'>￥</text>{{item.price}}<text class='jiao'></text></view>
-        <view class='yuan'>￥{{item.marketPrice}}</view>
-        <view class='gwc'><image src='../images/gwico.png'></image></view>
-      </view>
-    </view>
-    </navigator>
-   </block>
+      <navigator url="/pages/details/details?id={{item.id}}">
+        <view class='gwlist'>
+          <view class='gwpic'>
+            <image src='{{hostUrl}}{{item.litpic}}' mode='aspectFill'></image>
+            <view class='yishou'>已售:{{item.sales}}</view>
+          </view>
+          <view class='gwinfo'>
+            <view class='name'>{{item.name}}
+              <text>规格:/{{item.unit}}</text>
+            </view>
+            <view class='price'>
+              <text class='fuhao'>￥</text>{{item.price}}
+              <text class='jiao'></text>
+            </view>
+            <view class='yuan'>￥{{item.marketPrice}}</view>
+            <view class='gwc'>
+              <image src='../../images/gwico.png'></image>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </block>
   </view>
   <view class='cptit'>生态土鸭
-    <navigator class='more'  url="/pages/goods_list/goods_list">更多<image src='../images/syico3.png'></image></navigator>
+    <navigator class='more' url="/pages/goods_list/goods_list">更多
+      <image src='../../images/syico3.png'></image>
+    </navigator>
   </view>
   <view class='gwcon'>
     <block wx:for="{{productThree}}" wx:key="{{item.id}}">
-  <navigator url="/pages/details/details?id={{item.id}}">
-    <view class='gwlist'>
-      <view class='gwpic'>
-        <image src='{{hostUrl}}{{item.litpic}}' mode='aspectFill'></image>
-        <view class='yishou'>已售:{{item.sales}}</view>
-      </view>
-      <view class='gwinfo'>
-        <view class='name'>{{item.name}}<text>规格:/{{item.unit}}</text></view>
-        <view class='price'><text class='fuhao'>￥</text>{{item.price}}<text class='jiao'></text></view>
-        <view class='yuan'>￥{{item.marketPrice}}</view>
-        <view class='gwc'><image src='../images/gwico.png'></image></view>
-      </view>
-    </view>
-    </navigator>
-   </block>
+      <navigator url="/pages/details/details?id={{item.id}}">
+        <view class='gwlist'>
+          <view class='gwpic'>
+            <image src='{{hostUrl}}{{item.litpic}}' mode='aspectFill'></image>
+            <view class='yishou'>已售:{{item.sales}}</view>
+          </view>
+          <view class='gwinfo'>
+            <view class='name'>{{item.name}}
+              <text>规格:/{{item.unit}}</text>
+            </view>
+            <view class='price'>
+              <text class='fuhao'>￥</text>{{item.price}}
+              <text class='jiao'></text>
+            </view>
+            <view class='yuan'>￥{{item.marketPrice}}</view>
+            <view class='gwc'>
+              <image src='../../images/gwico.png'></image>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </block>
   </view>
-  <view class='cptit' >特色农产品
-    <navigator class='more' url="/pages/goods_list/goods_list">更多<image src='../images/syico3.png'></image></navigator>
+  <view class='cptit'>特色农产品
+    <navigator class='more' url="/pages/goods_list/goods_list">更多
+      <image src='../../images/syico3.png'></image>
+    </navigator>
   </view>
   <view class='gwcon'>
     <block wx:for="{{productFour}}" wx:key="{{item.id}}">
-  <navigator url="/pages/details/details?id={{item.id}}">
-    <view class='gwlist'>
-      <view class='gwpic'>
-        <image src='{{hostUrl}}{{item.litpic}}' mode='aspectFill'></image>
-        <view class='yishou'>已售:{{item.sales}}</view>
-      </view>
-      <view class='gwinfo'>
-        <view class='name'>{{item.name}}<text>规格:/{{item.unit}}</text></view>
-        <view class='price'><text class='fuhao'>￥</text>{{item.price}}<text class='jiao'></text></view>
-        <view class='yuan'>￥{{item.marketPrice}}</view>
-        <view class='gwc'><image src='../images/gwico.png'></image></view>
-      </view>
-    </view>
-    </navigator>
-   </block>
+      <navigator url="/pages/details/details?id={{item.id}}">
+        <view class='gwlist'>
+          <view class='gwpic'>
+            <image src='{{hostUrl}}{{item.litpic}}' mode='aspectFill'></image>
+            <view class='yishou'>已售:{{item.sales}}</view>
+          </view>
+          <view class='gwinfo'>
+            <view class='name'>{{item.name}}
+              <text>规格:/{{item.unit}}</text>
+            </view>
+            <view class='price'>
+              <text class='fuhao'>￥</text>{{item.price}}
+              <text class='jiao'></text>
+            </view>
+            <view class='yuan'>￥{{item.marketPrice}}</view>
+            <view class='gwc'>
+              <image src='../../images/gwico.png'></image>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </block>
   </view>
   <view class='zhichi'>
-    <image src='../images/zclogo.png' mode='widthFix'></image>
+    <image src='../../images/zclogo.png' mode='widthFix'></image>
     由祥云时代提供技术支持
   </view>
-  <include src="../footer/footer.wxml"/>
+  <include src="../footer/footer.wxml" />
 </view>
-

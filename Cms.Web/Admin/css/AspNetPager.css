@@ -1,0 +1,35 @@
+﻿.paginator
+{
+	font: 11px Arial, Helvetica, sans-serif;
+	padding: 1px 1px 1px 0;
+	margin: 0px;
+}
+.paginator a
+{
+	padding: 1px 1px;
+	border: solid 1px #ddd;
+	background: #fff;
+	text-decoration: none;
+	margin-right: 1px;
+}
+.paginator a:visited
+{
+	padding: 1px 1px;
+	border: solid 1px #ddd;
+	background: #fff;
+	text-decoration: none;
+}
+.paginator .cpb
+{
+	padding: 1px 1px;
+	font-weight: bold;
+	font-size: 13px;
+	border: none;
+}
+.paginator a:hover
+{
+	color: #fff;
+	background: #ffa501;
+	border-color: #ffa501;
+	text-decoration: none;
+}

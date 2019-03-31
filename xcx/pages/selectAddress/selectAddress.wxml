@@ -1,17 +1,25 @@
 <!--选择收货地址-->
 <view class='addrcon'>
-<block wx:for="{{addressList}}" wx:key="{{item.id}}">
-  <view class='addrlist'>
-    <view class='addr'>{{item.address}}</view>
-    <view class='dianhua'><text>{{item.consignee}}</text>{{item.cellphone}}</view>
-    <view class='addrb'>
-      <view class='moren'><label><radio color='#e6442d' wx:if="{{item.is_default==1}}" bindtap='radio' data-id='{{item.id}}' checked='true'></radio>
-      <radio color='#e6442d' wx:else bindtap='radio' data-id='{{item.id}}' ></radio>
-      设成默认</label></view>
-      <button class='edit' bindtap='edit' data-id='{{item.id}}'><image src='../images/bjico.png'></image>编辑</button>
-      <button class='delete' bindtap='delete' data-id='{{item.id}}'><image src='../images/scico.png'></image>删除</button>
+  <block wx:for="{{addressList}}" wx:key="{{item.id}}">
+    <view class='addrlist'>
+      <view class='addr'>{{item.address}}</view>
+      <view class='dianhua'>
+        <text>{{item.consignee}}</text>{{item.cellphone}}</view>
+      <view class='addrb'>
+        <view class='moren'>
+          <label>
+            <radio color='#e6442d' wx:if="{{item.is_default==1}}" bindtap='radio' data-id='{{item.id}}' checked='true'></radio>
+            <radio color='#e6442d' wx:else bindtap='radio' data-id='{{item.id}}'></radio>
+            设成默认</label>
+        </view>
+        <button class='edit' bindtap='edit' data-id='{{item.id}}'>
+          <image src='../../images/bjico.png'></image>编辑</button>
+        <button class='delete' bindtap='delete' data-id='{{item.id}}'>
+          <image src='../../images/scico.png'></image>删除</button>
+      </view>
     </view>
-  </view>
   </block>
 </view>
-<view class='addbtn' bindtap='addAddress'>新增收货地址<image src='../images/jiaico.png'></image></view>
+<view class='addbtn' bindtap='addAddress'>新增收货地址
+  <image src='../../images/jiaico.png'></image>
+</view>

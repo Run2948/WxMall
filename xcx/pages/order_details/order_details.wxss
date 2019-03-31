@@ -1,61 +1,73 @@
 /* pages/order_details/order_details.wxss */
 @import "../pub_top/pub_top.wxss";
-.text_box{
+
+.text_box {
   width: 94%;
   padding: 0 3%;
   height: 43rpx;
   line-height: 43rpx;
   font-size: 26rpx;
-  color: #0c0c0c
+  color: #0c0c0c;
 }
-.first{
+
+.first {
   padding-top: 18rpx;
 }
-.last{
+
+.last {
   padding-bottom: 27rpx;
-  border-bottom: 20rpx solid #f2f2f2
+  border-bottom: 20rpx solid #f2f2f2;
 }
-.height{
+
+.height {
   height: 90rpx;
   line-height: 90rpx;
-  border-bottom: 20rpx solid #f2f2f2
+  border-bottom: 20rpx solid #f2f2f2;
 }
-.order{
+
+.order {
   width: 94%;
   padding: 24rpx 3%;
   border-bottom: 20rpx solid #f2f2f2;
   height: 130rpx;
   position: relative;
 }
-.order_img{
+
+.order_img {
   width: 130rpx;
   height: 130rpx;
   position: absolute;
   left: 3%;
   top: 24rpx;
 }
-.order_xx{
+
+.order_xx {
   width: 100%;
   box-sizing: border-box;
   padding-left: 150rpx;
   height: 43rpx;
   line-height: 43rpx;
   font-size: 28rpx;
-  color: #999
+  color: #999;
 }
-.left{
+
+.left {
   float: left;
 }
-.right{
+
+.right {
   float: right;
 }
-.cl_df0c1d{
+
+.cl_df0c1d {
   color: #df0c1d;
 }
-.del{
-  text-decoration: line-through
+
+.del {
+  text-decoration: line-through;
 }
-.weixin{
+
+.weixin {
   width: 94%;
   padding: 0 3%;
   height: 90rpx;
@@ -63,43 +75,52 @@
   color: #333;
   font-size: 28rpx;
 }
-.what{
-  border-bottom: 2rpx solid #999
+
+.what {
+  border-bottom: 2rpx solid #999;
 }
-.fs_last{
+
+.fs_last {
   border-bottom: 20rpx solid #f2f2f2;
 }
-.spxx{
+
+.spxx {
   overflow: hidden;
   padding: 20rpx 0;
   border-bottom: 20rpx solid #f2f2f2;
 }
-.spxx_box{
+
+.spxx_box {
   height: 44rpx;
   line-height: 44rpx;
   font-size: 28rpx;
   color: #999;
   padding: 0 3%;
 }
-.spxx_last{
+
+.spxx_last {
   color: #df0c1d;
   font-size: 32rpx;
 }
-.time{
+
+.time {
   height: 45rpx;
   line-height: 45rpx;
 }
-.time_box{
+
+.time_box {
   padding: 20rpx 0;
   overflow: hidden;
   border-bottom: 20rpx solid #f2f2f2;
 }
-.bottom{
+
+.bottom {
   width: 94%;
   padding: 15rpx 3%;
   height: 70rpx;
 }
-.bottom button{
+
+.bottom button {
   height: 70rpx;
   line-height: 70rpx;
   border: none;
@@ -110,4 +131,3 @@
   float: left;
   margin-right: 5px;
 }
-

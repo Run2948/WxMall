@@ -11,26 +11,26 @@ Page({
     interval: 5000,
     duration: 1000,
     list: [],
-    page: 0,//页码
-    winHeight: "",//窗口高度
+    page: 0, //页码
+    winHeight: "", //窗口高度
     currentTab: 0, //预设当前项的值
     scrollLeft: 0, //tab标题的滚动条位置
-    isGet: true,//是否可以请求
-    hidden: true,//加载弹框显示 
-    price:10,
+    isGet: true, //是否可以请求
+    hidden: true, //加载弹框显示 
+    price: 10,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     var that = this;
     var userId = wx.getStorageSync('userId');
     if (userId != null && userId > 0 && userId != '') {
-      that.getUser(userId);//读取会员
+      that.getUser(userId); //读取会员
     }
   },
-  getUser: function (userId) {//读取会员
+  getUser: function(userId) { //读取会员
     var that = this;
     wx.request({
       url: app.globalData.apiUrl,
@@ -41,7 +41,7 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           that.setData({
             user: res.data,
@@ -54,18 +54,18 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
     var that = this;
     //  高度自适应
     wx.getSystemInfo({
-      success: function (res) {
+      success: function(res) {
         var clientHeight = res.windowHeight,
           clientWidth = res.windowWidth,
           rpxR = 750 / clientWidth;
@@ -79,9 +79,9 @@ Page({
 
       }
     });
-    this.getList();//列表
+    this.getList(); //列表
   },
-  getList: function () {//读取列表
+  getList: function() { //读取列表
     var that = this;
     var page = that.data.page + 1;
     this.setData({
@@ -99,7 +99,7 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data) {
           var list = that.data.productList;
           var newList = res.data;
@@ -125,29 +125,29 @@ Page({
     });
   },
   //页面滑动到底部
-  bindDownLoad: function () {
+  bindDownLoad: function() {
     if (this.data.isGet) {
       this.getProductList();
     }
   },
   //打开积分兑换
-  openGift: function () {
+  openGift: function() {
     wx.navigateTo({
       url: '/pages/gift_list/gift_list',
     })
   },
   //选择充值金额
-  selectMoney:function(e){
+  selectMoney: function(e) {
     var price = e.currentTarget.dataset.price;
-    var that=this;
+    var that = this;
     that.setData({
       price: price,
-    },function(){
+    }, function() {
 
     })
   },
   //充值
-  recharge:function(){
+  recharge: function() {
     var that = this;
     console.log(that.data.price)
     wx.request({
@@ -160,8 +160,8 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
-        if (res.data.status>0) {
+      success: function(res) {
+        if (res.data.status > 0) {
           wx.request({
             url: app.globalData.apiUrl,
             data: {
@@ -173,32 +173,31 @@ Page({
             header: {
               'content-type': 'application/json'
             },
-            success: function (resOrderResult) {
+            success: function(resOrderResult) {
               if (resOrderResult.data != null) {
                 console.log(resOrderResult.data)
-                wx.requestPayment(
-                  {
-                    'timeStamp': resOrderResult.data.timeStamp,
-                    'nonceStr': resOrderResult.data.nonceStr,
-                    'package': resOrderResult.data.package,
-                    'signType': 'MD5',
-                    'paySign': resOrderResult.data.paySign,
-                    'success': function (res) {
-                      wx.redirectTo({
-                        url: '/pages/bag/bag',
-                      })
-                    },
-                    'fail': function (res) {
-                      wx.redirectTo({
-                        url: '/pages/recharge/recharge',
-                      })
-                     },
-                    'complete': function (res) { 
-                      wx.redirectTo({
-                        url: '/pages/bag/bag',
-                      })
-                    }
-                  })
+                wx.requestPayment({
+                  'timeStamp': resOrderResult.data.timeStamp,
+                  'nonceStr': resOrderResult.data.nonceStr,
+                  'package': resOrderResult.data.package,
+                  'signType': 'MD5',
+                  'paySign': resOrderResult.data.paySign,
+                  'success': function(res) {
+                    wx.redirectTo({
+                      url: '/pages/bag/bag',
+                    })
+                  },
+                  'fail': function(res) {
+                    wx.redirectTo({
+                      url: '/pages/recharge/recharge',
+                    })
+                  },
+                  'complete': function(res) {
+                    wx.redirectTo({
+                      url: '/pages/bag/bag',
+                    })
+                  }
+                })
               }
             }
           })
@@ -209,35 +208,35 @@ Page({
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

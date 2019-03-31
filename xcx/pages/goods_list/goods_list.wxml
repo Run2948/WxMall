@@ -1,7 +1,7 @@
 <!--pages/goods_list/goods_list.wxml-->
 <view class='search'>
-  <image src='../images/search.jpg'></image>
-    <input type='text' placeholder='搜索商品名称' value="{{word}}"   bindinput="searchActiveChangeinput" bindblur='searchSubmit'></input>
+  <image src='../../images/search.jpg'></image>
+  <input type='text' placeholder='搜索商品名称' value="{{word}}" bindinput="searchActiveChangeinput" bindblur='searchSubmit'></input>
 </view>
 <view class='switch_box'>
   <!-- 选中选项class=“active” -->
@@ -26,7 +26,7 @@
   </view>
   <view bindtap='switchTab' data-order='3' hover-class='none' class='{{switchTabThree==true ? "active":""}}'>
     <text>价格</text>
-   <!-- <view wx:if="{{switchTabThree}}" >
+    <!-- <view wx:if="{{switchTabThree}}" >
     <image src='../images/paixicon1.png' class='show'></image>
     </view>
     <view wx:else >
@@ -44,7 +44,7 @@
   </view>
   <view bindtap='switchTab' data-order='5' hover-class='none' class='{{switchTabFive==true ? "active":""}}'>
     <text>上新</text>
-   <!-- <view wx:if="{{switchTabFive}}" >
+    <!-- <view wx:if="{{switchTabFive}}" >
     <image src='../images/paixicon1.png' class='show'></image>
     </view>
     <view wx:else >
@@ -53,43 +53,35 @@
   </view>
 </view>
 <scroll-view scroll-y="true" class="scoll-h" bindscrolltolower="bindDownLoad" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
-<view class='list_box'>
-<block wx:for="{{productList}}" wx:key="{{item.id}}">
-<navigator url='/pages/details/details?id={{item.id}}'>
-  <view class='good'>
-    <view class='img'>
-      <image src='{{hostUrl}}{{item.litpic}}' mode='aspectFill'></image>
-      <text>已售:{{item.sales}}</text>  
-    </view>
-    <text class='title'>{{item.name}}</text>
-    <view class='jiege'>
-      <view class='jiage_box'>
-        <text class='small'>￥</text>
-        <text class='yuan'>{{item.price}}</text>
-        <text class='jiao'></text>
-      </view>
-      <text class='del'>￥{{item.marketPrice}}</text>
-      <navigator url='#'><image src='../images/good_gwc.png'></image></navigator>
-    </view>
+  <view class='list_box'>
+    <block wx:for="{{productList}}" wx:key="{{item.id}}">
+      <navigator url='/pages/details/details?id={{item.id}}'>
+        <view class='good'>
+          <view class='img'>
+            <image src='{{hostUrl}}{{item.litpic}}' mode='aspectFill'></image>
+            <text>已售:{{item.sales}}</text>
+          </view>
+          <text class='title'>{{item.name}}</text>
+          <view class='jiege'>
+            <view class='jiage_box'>
+              <text class='small'>￥</text>
+              <text class='yuan'>{{item.price}}</text>
+              <text class='jiao'></text>
+            </view>
+            <text class='del'>￥{{item.marketPrice}}</text>
+            <navigator url='#'>
+              <image src='../../images/good_gwc.png'></image>
+            </navigator>
+          </view>
+        </view>
+      </navigator>
+    </block>
+    <!-- <text class='ling'>没有更多商品了</text> -->
   </view>
-  </navigator>
-  </block>
-  <!-- <text class='ling'>没有更多商品了</text> -->
-</view>
 </scroll-view>
- <view>
-    <loading hidden="{{hidden}}">
-      加载中...
-    </loading>
-  </view>
-<include src="../footer/footer.wxml"/>
-
-
-
-
-
-
-
-
-
-
+<view>
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+</view>
+<include src="../footer/footer.wxml" />

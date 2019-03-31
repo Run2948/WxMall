@@ -7,22 +7,22 @@ Page({
    */
   data: {
     hostUrl: app.globalData.hostUrl,
-    typeId:0,
+    typeId: 0,
     switchTab: true,
     switchTabOne: false,
     switchTabTwo: false,
     switchTabThree: false,
     switchTabFour: false,
-    keyWord:'',
+    keyWord: '',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    
+  onLoad: function(options) {
+
   },
-  getOrderList: function () {//读取订单
+  getOrderList: function() { //读取订单
     var that = this;
     var where = "";
     if (that.data.switchTab) {
@@ -40,8 +40,8 @@ Page({
     if (that.data.switchTabFour) {
       where = "order_status=1 and ";
     }
-    if (that.data.keyWord.length>0){
-      where = where + " order_num='" + that.data.keyWord+"' and ";
+    if (that.data.keyWord.length > 0) {
+      where = where + " order_num='" + that.data.keyWord + "' and ";
     }
     wx.request({
       url: app.globalData.apiUrl,
@@ -53,7 +53,7 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           that.setData({
             orderList: res.data,
@@ -62,7 +62,7 @@ Page({
       }
     })
   },
-  switchTab: function (e) {
+  switchTab: function(e) {
     var that = this;
     if (e.currentTarget.dataset.order == 0) {
       that.setData({
@@ -73,7 +73,7 @@ Page({
         switchTabTwo: false,
         switchTabThree: false,
         switchTabFour: false,
-      }, function () {
+      }, function() {
         that.getOrderList();
       });
     } else if (e.currentTarget.dataset.order == 1) {
@@ -85,7 +85,7 @@ Page({
         switchTabTwo: false,
         switchTabThree: false,
         switchTabFour: false,
-      }, function () {
+      }, function() {
         that.getOrderList();
       });
 
@@ -98,7 +98,7 @@ Page({
         switchTabTwo: true,
         switchTabThree: false,
         switchTabFour: false,
-      }, function () {
+      }, function() {
         that.getOrderList();
       });
 
@@ -111,7 +111,7 @@ Page({
         switchTabTwo: false,
         switchTabThree: true,
         switchTabFour: false,
-      }, function () {
+      }, function() {
         that.getOrderList();
       });
 
@@ -124,51 +124,49 @@ Page({
         switchTabTwo: false,
         switchTabThree: false,
         switchTabFour: true,
-      }, function () {
+      }, function() {
         that.getOrderList();
       });
 
     }
   },
   //输入内容时
-  searchActiveChangeinput: function (e) {
-    var that=this;
+  searchActiveChangeinput: function(e) {
+    var that = this;
     const val = e.detail.value;
     that.setData({
       keyWord: val,
-    }, function () {
-    });
+    }, function() {});
   },
   //搜索提交
-  searchSubmit: function () {
+  searchSubmit: function() {
     this.getOrderList();
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-  
+  onReady: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
     var that = this;
     var userId = wx.getStorageSync('userId');
     if (userId != null && userId > 0 && userId != '') {
-      that.getOrderList();//读取订单
+      that.getOrderList(); //读取订单
     } else {
       wx.showModal({
         title: '温馨提示',
         content: '先登录',
-        success: function (res) {
+        success: function(res) {
           if (res.confirm) {
             wx.navigateTo({
               url: '/pages/mine/mine',
             })
-          } else if (res.cancel) {
-          }
+          } else if (res.cancel) {}
         }
       })
     }
@@ -177,35 +175,35 @@ Page({
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-  
+  onHide: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-  
+  onUnload: function() {
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-  
+  onPullDownRefresh: function() {
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-  
+  onReachBottom: function() {
+
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
+  onShareAppMessage: function() {
+
   }
 })

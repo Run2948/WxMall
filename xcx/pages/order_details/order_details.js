@@ -12,30 +12,29 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     var that = this;
     var userId = wx.getStorageSync('userId');
     if (userId != null && userId > 0 && userId != '') {
-      that.getOrderSubList(options.id);//读取订单
-      that.getOrder(options.id);//读取订单
+      that.getOrderSubList(options.id); //读取订单
+      that.getOrder(options.id); //读取订单
       that.getAddressList();
       that.getOrderSate(options.id);
     } else {
       wx.showModal({
         title: '温馨提示',
         content: '先登录',
-        success: function (res) {
+        success: function(res) {
           if (res.confirm) {
             wx.navigateTo({
               url: '/pages/mine/mine',
             })
-          } else if (res.cancel) {
-          }
+          } else if (res.cancel) {}
         }
       })
     }
   },
-  getOrder: function (id) {//读取订单
+  getOrder: function(id) { //读取订单
     var that = this;
     wx.request({
       url: app.globalData.apiUrl,
@@ -46,7 +45,7 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           that.setData({
             order: res.data,
@@ -55,7 +54,7 @@ Page({
       }
     })
   },
-  getOrderSubList: function (id) {//读取订单
+  getOrderSubList: function(id) { //读取订单
     var that = this;
     wx.request({
       url: app.globalData.apiUrl,
@@ -67,7 +66,7 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           that.setData({
             orderSubList: res.data,
@@ -76,7 +75,7 @@ Page({
       }
     })
   },
-  getAddressList: function () {//读取收货地址
+  getAddressList: function() { //读取收货地址
     var that = this;
     wx.request({
       url: app.globalData.apiUrl,
@@ -88,7 +87,7 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           that.setData({
             address: res.data[0],
@@ -97,7 +96,7 @@ Page({
       }
     })
   },
-  getOrderSate: function (id) {//读取订单
+  getOrderSate: function(id) { //读取订单
     var that = this;
     wx.request({
       url: app.globalData.apiUrl,
@@ -109,7 +108,7 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           that.setData({
             orderStatus: res.data.status,
@@ -118,7 +117,7 @@ Page({
       }
     })
   },
-  pay:function(e){
+  pay: function(e) {
     var id = e.currentTarget.dataset.id;
     var that = this;
     wx.request({
@@ -127,34 +126,33 @@ Page({
         opt: 'GetUnifiedOrderResult',
         userId: wx.getStorageSync('userId'),
         id: id,
-        typeId:1,
+        typeId: 1,
       },
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           console.log(res.data)
-          wx.requestPayment(
-            {
-              'timeStamp': res.data.timeStamp,
-              'nonceStr': res.data.nonceStr,
-              'package': res.data.package,
-              'signType': 'MD5',
-              'paySign': res.data.paySign,
-              'success': function (res) {
-                wx.navigateBack({
-                  url: '/pages/order/order' ,
-                })
-              },
-              'fail': function (res) { },
-              'complete': function (res) { }
-            }) 
+          wx.requestPayment({
+            'timeStamp': res.data.timeStamp,
+            'nonceStr': res.data.nonceStr,
+            'package': res.data.package,
+            'signType': 'MD5',
+            'paySign': res.data.paySign,
+            'success': function(res) {
+              wx.navigateBack({
+                url: '/pages/order/order',
+              })
+            },
+            'fail': function(res) {},
+            'complete': function(res) {}
+          })
         }
       }
     })
   },
-  canalOrder:function(e){
+  canalOrder: function(e) {
     var id = e.currentTarget.dataset.id;
     var that = this;
     wx.request({
@@ -166,26 +164,26 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
-          if (res.data.status == 0){
-           wx.showToast({
-             title: '取消成功',
-             icon: 'success',
-             duration: 2000
-           });
-           that.getOrderSubList(id);//读取订单
-           that.getOrder(id);//读取订单
-           that.getAddressList();
-           that.getOrderSate(id);
-         }else{
+          if (res.data.status == 0) {
+            wx.showToast({
+              title: '取消成功',
+              icon: 'success',
+              duration: 2000
+            });
+            that.getOrderSubList(id); //读取订单
+            that.getOrder(id); //读取订单
+            that.getAddressList();
+            that.getOrderSate(id);
+          } else {
             wx.showToast({
               title: '取消失败',
               icon: 'error',
               duration: 2000
-            }) 
-         }
-          
+            })
+          }
+
         }
       }
     })
@@ -193,49 +191,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-  
+  onReady: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-  
+  onShow: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-  
+  onHide: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-  
+  onUnload: function() {
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-  
+  onPullDownRefresh: function() {
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-  
+  onReachBottom: function() {
+
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
+  onShareAppMessage: function() {
+
   }
 })

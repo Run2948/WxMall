@@ -1,0 +1,272 @@
+﻿.mytips{
+    padding-left:20px;   
+         background:url(default/wanning1.png)  no-repeat 10px 9px  #f8f8d8; 
+         border:1px solid #FCDEA7; 
+        line-height:1.5em;
+        padding: 10px 10px 8px 30px;
+position: relative;
+color: #666;
+font-size:12px;
+font-family: "Microsoft YaHei";
+}
+
+.ltable th, .ltable td {
+
+border: 1px solid #e1e1e1;
+}
+.ltable .ltbody td {
+    text-align:center;
+}
+.mytextarea {
+width:400px;
+height:130px;
+
+padding: 5px 4px;
+min-height: 20px;
+line-height: 20px;
+border: 1px solid #d4d4d4;
+background: #fff;
+vertical-align: middle;
+color: #333;
+font-size: 100%;
+
+}
+.righttopname {
+font-size:14px;
+}
+    .righttopname .guc {
+    
+    color:#16a0d3;
+    }
+
+
+
+ /** =========== templates style =============*/
+.templatelist {
+width:100%;
+overflow: hidden;
+}
+    .templatelist ul li {
+    
+    }
+ .templatelidiv {
+float: left;
+margin: 0 0 20px 20px;
+width: 170px;
+height: 383px;
+text-align: center;
+background:url(default/radio_iphone.png) no-repeat;
+}
+    .templatelist ul li img {
+    width:170px;
+    }
+a.fontwhite {
+color:white;
+
+}
+ /** =========== templates style  end=============*/
+
+.act_before
+{
+
+}
+.act_in
+{
+    color:green;
+}
+.act_end
+{
+    color:red;
+}
+
+.no_checktip {
+margin-left: 8px;
+line-height: 20px;
+height: 20px;
+overflow: hidden;
+color: #999;
+font-size: 12px;
+}
+/**------------------360pano------------------*/
+.panobigpic {
+max-height:150px;
+}
+.panolistpic {
+    max-height:80px;
+    max-width:150px;
+}
+
+
+.tb_sku {
+width:450px;
+}
+.tb_sku td {
+padding: 1px 0;
+}
+
+/**-------------------------pic select page*/
+  .picLabel {
+             width: 55px;
+            height: 72px;
+        }
+.picTd,.chkTd {
+width:55px;
+}
+ 
+
+            .picLabel table td {
+                max-width: 55px;
+                max-height: 72px;
+                border: 0px;
+                padding: 0px;
+                margin: 0px;
+            }
+
+        .picUl li {
+         
+            float: left;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            list-style-type: none;
+            text-align: center;
+        }
+
+            .picUl li img {
+                max-width: 45px;
+                padding: 5px;
+            }
+
+            .picUl li table {
+                background-color: #A0B4DC;
+                font-size: 12px;
+            }
+
+            .picUl li span {
+              
+                width: 45px;
+                height: 45px;
+                color: white;
+                 
+                font-size: 3em;
+            }
+
+/**------------------------- vip card page*/
+ 
+#cardxgt .vipcard {
+ 
+position: relative;
+height: 159px;
+text-align: left;
+width: 267px;
+}
+#cardxgt #cardbg {
+height: 159px;
+width: 267px;
+position: absolute;
+border-radius: 8px;
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+top: 0;
+left: 0;
+z-index: 1;
+}
+#cardxgt .vipcard .cardlogo {
+max-height: 70px;
+position: absolute;
+top: 8px;
+left: 5px;
+z-index: 2;
+}
+#cardxgt .vipcard h1 {
+position: absolute;
+right: 10px;
+top: 7px;
+text-shadow: 0 1px rgba(255, 255, 255, 0.2);
+color: #000;
+font-size: 11px;
+line-height: 25px;
+text-align: right;
+font-weight: normal;
+z-index: 2;
+}
+#cardxgt .vipcard .verify {
+display: inline-block;
+height: 40px;
+top: 105px;
+right: 12px;
+text-align: right;
+line-height: 24px;
+color: #000;
+font-size: 20px;
+text-shadow: 0 1px rgba(255, 255, 255, 0.2);
+z-index: 2;
+}
+#cardxgt .pdo {
+position: absolute;
+top: 0;
+left: 0;
+display: inline-block;
+}
+
+#cardxgt .vipcard .verify span {
+display: inline-block;
+text-align: left;
+}
+#cardxgt .vipcard .verify em {
+display: block;
+line-height: 13px;
+font-size: 10px;
+font-weight: normal;
+font-style: normal;
+}
+
+#cardxgt .vipcard .verify span {
+display: inline-block;
+text-align: left;
+}
+.userinfoArea td {
+margin-left: 10px;
+padding: 8px 0;
+color: #666;
+font-size: 12px;
+}
+
+.banner img {
+display: block;
+width: 213px;
+border: 0;
+}
+.banner {
+display: block;
+width: 213px;
+height: 278px;
+overflow: hidden;
+}
+.red {
+color: #F00;
+background-color: transparent;
+border: 0;
+}
+.green {
+color: #090;
+background-color: transparent;
+border: 0;
+}
+
+
+.span_wlq {
+color:red;
+}
+
+ .txtname {
+            width:120px;
+        }
+.bloder_m {
+font-weight:bold;
+color:red;
+line-height:20px;
+font-size:18px;
+}

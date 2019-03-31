@@ -11,16 +11,16 @@ Page({
     hostUrl: app.globalData.hostUrl,
     showModel: true,
     showCeng: true,
-    quantity:1,
-    stock:0,
+    quantity: 1,
+    stock: 0,
   },
-  closeAllLayer: function () {
+  closeAllLayer: function() {
     this.setData({
       showModel: true,
       showCeng: true
     })
   },
-  chooseModel: function () {
+  chooseModel: function() {
     this.setData({
       showCeng: false,
       showModel: false
@@ -30,14 +30,14 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     var that = this;
     that.setData({
       id: options.id,
     });
-    that.getInfo(options);//读取详细
+    that.getInfo(options); //读取详细
   },
-  getInfo: function (options) {//读取详细
+  getInfo: function(options) { //读取详细
     var that = this;
     wx.request({
       url: app.globalData.apiUrl,
@@ -48,41 +48,42 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           that.setData({
             model: res.data,
             stock: res.data.stock,
-            content: WxParse.wxParse('content', 'html',res.data.content,that),
+            content: WxParse.wxParse('content', 'html', res.data.content, that),
             minprice: (res.data.marketPrice - res.data.price).toFixed(2),
           })
-          wx.setNavigationBarTitle({ title: res.data.name });
+          wx.setNavigationBarTitle({
+            title: res.data.name
+          });
         }
       }
     })
   },
-  cart:function(e){//加入购物车
-    var that=this;
+  cart: function(e) { //加入购物车
+    var that = this;
     var id = e.currentTarget.dataset.id;
     var userId = wx.getStorageSync('userId');
     if (userId != null && userId > 0 && userId != '') {
       that.addCart(id, userId, that.data.quantity, 1, e.currentTarget.dataset.unit);
-    }else{
+    } else {
       wx.showModal({
         title: '温馨提示',
         content: '先登录',
-        success: function (res) {
+        success: function(res) {
           if (res.confirm) {
             wx.navigateTo({
               url: '/pages/mine/mine',
             })
-          } else if (res.cancel) {
-          }
+          } else if (res.cancel) {}
         }
       })
     }
   },
-  book: function (e) {//立即购买
+  book: function(e) { //立即购买
     var that = this;
     var id = e.currentTarget.dataset.id;
     var userId = wx.getStorageSync('userId');
@@ -92,18 +93,17 @@ Page({
       wx.showModal({
         title: '温馨提示',
         content: '先登录',
-        success: function (res) {
+        success: function(res) {
           if (res.confirm) {
             wx.navigateTo({
               url: '/pages/mine/mine',
             })
-          } else if (res.cancel) {
-          }
+          } else if (res.cancel) {}
         }
       })
     }
   },
-  addCart: function (id, userId, quantity, isChecked, unit) {//读取详细
+  addCart: function(id, userId, quantity, isChecked, unit) { //读取详细
     var that = this;
     wx.request({
       url: app.globalData.apiUrl,
@@ -118,103 +118,103 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
-          if (res.data.status==0&&isChecked==1){
+          if (res.data.status == 0 && isChecked == 1) {
             wx.showToast({
               title: '加入成功',
               icon: 'success',
               duration: 2000
-            })  
-          } else if (res.data.status == 0 && isChecked == 2){
+            })
+          } else if (res.data.status == 0 && isChecked == 2) {
             wx.navigateTo({
               url: '/pages/con_order/con_order',
             })
-          }else{
+          } else {
             wx.showToast({
               title: '失败',
               icon: 'error',
               duration: 2000
-            })  
+            })
           }
         }
       }
     })
   },
-  jian: function (e) {//减
+  jian: function(e) { //减
     var that = this;
-    if (that.data.quantity>1){
+    if (that.data.quantity > 1) {
       that.setData({
-        quantity: that.data.quantity-1,
+        quantity: that.data.quantity - 1,
       })
-    }else{
+    } else {
       wx.showToast({
         title: '数量不能为0',
         icon: 'error',
         duration: 2000
-      })  
+      })
     }
   },
-  jia: function (e) {//加
+  jia: function(e) { //加
     var that = this;
     if (that.data.quantity < that.data.stock) {
       that.setData({
         quantity: that.data.quantity + 1,
       })
-    }else{
+    } else {
       wx.showToast({
         title: '库存不足',
         icon: 'error',
         duration: 2000
-      })  
+      })
     }
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-  
+  onReady: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-  
+  onShow: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-  
+  onHide: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-  
+  onUnload: function() {
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-  
+  onPullDownRefresh: function() {
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-  
+  onReachBottom: function() {
+
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
+  onShareAppMessage: function() {
+
   }
 })

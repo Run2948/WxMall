@@ -47,7 +47,7 @@ namespace Cms.Service
             }
             catch (Exception e)
             {
-                //Log4Helper.Error("运行定时任务出错：", e);
+               // Log4Helper.Error("运行定时任务出错：", e);
             }
             #endregion
         }

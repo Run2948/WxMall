@@ -13,29 +13,28 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     var that = this;
     var userId = wx.getStorageSync('userId');
     if (userId != null && userId > 0 && userId != '') {
-      that.getCartList();//读取购物车
-      that.dTotal();//读取金额
-      that.getCountChecked(function(data){});//读取全选状态
+      that.getCartList(); //读取购物车
+      that.dTotal(); //读取金额
+      that.getCountChecked(function(data) {}); //读取全选状态
     } else {
       wx.showModal({
         title: '温馨提示',
         content: '先登录',
-        success: function (res) {
+        success: function(res) {
           if (res.confirm) {
             wx.navigateTo({
               url: '/pages/mine/mine',
             })
-          } else if (res.cancel) {
-          }
+          } else if (res.cancel) {}
         }
       })
     }
   },
-  getCartList: function () {//读取购物车
+  getCartList: function() { //读取购物车
     var that = this;
     wx.request({
       url: app.globalData.apiUrl,
@@ -47,7 +46,7 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           that.setData({
             cartList: res.data,
@@ -56,7 +55,7 @@ Page({
       }
     })
   },
-  dTotal: function () {//读取金额
+  dTotal: function() { //读取金额
     var that = this;
     wx.request({
       url: app.globalData.apiUrl,
@@ -68,7 +67,7 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           that.setData({
             dTotal: res.data.dTotal,
@@ -80,7 +79,7 @@ Page({
       }
     })
   },
-  jian: function (e) {//减
+  jian: function(e) { //减
     var that = this;
     var id = e.currentTarget.dataset.id;
     wx.request({
@@ -93,11 +92,11 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           if (res.data.status == 0) {
-            that.getCartList();//读取购物车
-            that.dTotal();//读取金额
+            that.getCartList(); //读取购物车
+            that.dTotal(); //读取金额
           } else {
             wx.showToast({
               title: '失败',
@@ -109,7 +108,7 @@ Page({
       }
     })
   },
-  jia: function (e) {//加
+  jia: function(e) { //加
     var that = this;
     var id = e.currentTarget.dataset.id;
     wx.request({
@@ -122,11 +121,11 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           if (res.data.status == 0) {
-            that.getCartList();//读取购物车
-            that.dTotal();//读取金额
+            that.getCartList(); //读取购物车
+            that.dTotal(); //读取金额
           } else {
             wx.showToast({
               title: '失败',
@@ -138,7 +137,7 @@ Page({
       }
     })
   },
-  choice: function (e) {//选择
+  choice: function(e) { //选择
     var that = this;
     var id = e.currentTarget.dataset.id;
     var checkId = e.currentTarget.dataset.ischecked;
@@ -152,14 +151,14 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           if (res.data.status == 0) {
-           
-            that.getCountChecked(function (data) { 
-              that.getCartList();//读取购物车
-              that.dTotal();//读取金额
-            });//读取全选状态
+
+            that.getCountChecked(function(data) {
+              that.getCartList(); //读取购物车
+              that.dTotal(); //读取金额
+            }); //读取全选状态
           } else {
             wx.showToast({
               title: '失败',
@@ -171,7 +170,7 @@ Page({
       }
     })
   },
-  selection: function (e) {//全选
+  selection: function(e) { //全选
     var that = this;
     var id = e.currentTarget.dataset.id;
     var checkId = e.currentTarget.dataset.id;
@@ -190,14 +189,14 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           if (res.data.status == 0) {
             that.setData({
               selection: selection,
-            }, function () {
-              that.getCartList();//读取购物车
-              that.dTotal();//读取金额
+            }, function() {
+              that.getCartList(); //读取购物车
+              that.dTotal(); //读取金额
             })
           } else {
             wx.showToast({
@@ -210,7 +209,7 @@ Page({
       }
     })
   },
-  getCountChecked: function (callback) {//检查是否全选
+  getCountChecked: function(callback) { //检查是否全选
     var that = this;
     wx.request({
       url: app.globalData.apiUrl,
@@ -222,18 +221,18 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data != null) {
           if (res.data.status == 2) {
             that.setData({
               selection: 2,
-            }, function () {
+            }, function() {
               callback(res.data.status)
             })
           } else if (res.data.status == 1 || res.data.status == 0) {
             that.setData({
               selection: 1,
-            }, function () {
+            }, function() {
               callback(res.data.status)
             })
           }
@@ -241,9 +240,9 @@ Page({
       }
     })
   },
-  buyNow: function () {
+  buyNow: function() {
     var that = this;
-    that.getCountChecked(function (data) {
+    that.getCountChecked(function(data) {
       if (data > 0) {
         wx.navigateTo({
           url: '/pages/con_order_integarl/con_order_integarl',
@@ -252,11 +251,10 @@ Page({
         wx.showModal({
           title: '温馨提示',
           content: '请选择商品',
-          success: function (res) {
+          success: function(res) {
             if (res.confirm) {
 
-            } else if (res.cancel) {
-            }
+            } else if (res.cancel) {}
           }
         })
       }
@@ -265,49 +263,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

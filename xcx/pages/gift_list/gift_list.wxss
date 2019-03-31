@@ -1,29 +1,40 @@
 /* pages/gift_list/gift_list.wxss */
 @import "../pub_top/pub_top.wxss";
-.dqye{background: #fff;padding: 20rpx 28rpx;font-size: 28rpx;color: #030303;border-bottom: 1px solid #cfcfd0;}
-.list_box{
+
+.dqye {
+  background: #fff;
+  padding: 20rpx 28rpx;
+  font-size: 28rpx;
+  color: #030303;
+  border-bottom: 1px solid #cfcfd0;
+}
+
+.list_box {
   width: 97%;
   padding: 20rpx 1.5% 120rpx;
   overflow: hidden;
 }
-.good{
+
+.good {
   width: 47%;
   margin: 1.5%;
   box-sizing: border-box;
   background: #fff;
   padding: 20rpx;
   float: left;
-  box-shadow: 0 4rpx 13rpx rgba(0,0,0,0.35);
+  box-shadow: 0 4rpx 13rpx rgba(0, 0, 0, 0.35);
 }
-.img{
+
+.img {
   display: block;
   overflow: hidden;
   width: 100%;
   position: relative;
 }
-.img text{
+
+.img text {
   display: inline-block;
-  background: rgba(179,179,179,0.53);
+  background: rgba(179, 179, 179, 0.53);
   color: #fff;
   text-align: center;
   font-size: 24rpx;
@@ -32,14 +43,16 @@
   padding: 0 15rpx;
   position: absolute;
   bottom: 10rpx;
-  right: 0
+  right: 0;
 }
-.good image{
+
+.good image {
   width: 100%;
   height: 300rpx;
   display: block;
 }
-.title{
+
+.title {
   line-height: 42rpx;
   font-size: 28rpx;
   color: #4c4c4c;
@@ -48,13 +61,28 @@
   white-space: nowrap;
   overflow: hidden;
 }
-.jiege{
-  position: relative
+
+.jiege {
+  position: relative;
 }
-.dui{font-size: 22rpx;color: #898989;}
-.dui view{margin-top: 10rpx;}
-.dui text{font-size: 24rpx;color: #ff0080;margin-top: 10rpx;display: block;}
-.jiege .gwc{
+
+.dui {
+  font-size: 22rpx;
+  color: #898989;
+}
+
+.dui view {
+  margin-top: 10rpx;
+}
+
+.dui text {
+  font-size: 24rpx;
+  color: #ff0080;
+  margin-top: 10rpx;
+  display: block;
+}
+
+.jiege .gwc {
   width: 65rpx;
   height: 65rpx;
   background: #ff0080;
@@ -63,13 +91,15 @@
   right: 0;
   bottom: 0;
 }
-.jiege .gwc image{
+
+.jiege .gwc image {
   display: block;
   margin: 15rpx auto;
   width: 37rpx;
   height: 34rpx;
 }
-.list_box .ling{
+
+.list_box .ling {
   width: 100%;
   text-align: center;
   display: block;
@@ -77,6 +107,31 @@
   color: #666;
   line-height: 50rpx;
 }
-.more{background: #d3d3d3;text-align: center;font-size: 22rpx;color: #242424;height: 64rpx;line-height: 64rpx;}
-.jfd{position: fixed;right: 0;bottom: 30%;text-align: center;background: #ff0080;color: #fff;font-size: 24rpx;padding: 10rpx 10rpx 10rpx 35rpx;border-radius: 50rpx 0 0 50rpx;}
-.jfd image{display: block;width: 37rpx;height: 34rpx;margin: 0 auto;}
+
+.more {
+  background: #d3d3d3;
+  text-align: center;
+  font-size: 22rpx;
+  color: #242424;
+  height: 64rpx;
+  line-height: 64rpx;
+}
+
+.jfd {
+  position: fixed;
+  right: 0;
+  bottom: 30%;
+  text-align: center;
+  background: #ff0080;
+  color: #fff;
+  font-size: 24rpx;
+  padding: 10rpx 10rpx 10rpx 35rpx;
+  border-radius: 50rpx 0 0 50rpx;
+}
+
+.jfd image {
+  display: block;
+  width: 37rpx;
+  height: 34rpx;
+  margin: 0 auto;
+}
